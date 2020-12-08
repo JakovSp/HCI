@@ -1,10 +1,8 @@
 import React from "react"
-import { Link } from "gatsby"
+import ContactBar from "../components/contact-bar"
 
 const IndexPage = () => (
-  <div>
-    <h1>ayy... nothing here!</h1>
-  </div>
+  <ContactBar/>
 )
 
 export default IndexPage
