@@ -8,18 +8,20 @@
 
   .navigationMenu ul{
     display: flex;
-    align-items: stretch; /* Default */
+    align-items: flex-start; /* Default */
     justify-content: space-between;
     margin: 0 -10px;
   }
 
   .navigationMenu li {
+    font-weight: bold;
+    display: flex;
+    align-items: center;
     margin: 0 10px;
     padding: 5px 0px;
     list-style: none;
     font-size: 14px;
-    line-height: 3px;
-    color: darkgray
+    color: #673122
   }
 
   .navigationMenu li:hover {
