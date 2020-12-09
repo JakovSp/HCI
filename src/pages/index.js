@@ -1,11 +1,11 @@
 import React from "react"
 import "../styles/global.css"
 
-import Navigation from '../components/Navigation/index.js'
+import NavigationHeader from '../components/NavigationHeader/index.js'
 
 const IndexPage = () => (
   <main>
-   <Navigation  activeTab = "Naslovna"/>
+   <NavigationHeader/>
   </main>
 )
 

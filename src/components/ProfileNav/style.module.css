@@ -1,0 +1,12 @@
+.profile {
+  display: flex;
+  font-weight: bold;
+  padding:5px 10px;
+  list-style: none;
+  font-size: 14px;
+  color: #673122
+}
+
+.profile li{
+  margin: 0px 10px;
+}
