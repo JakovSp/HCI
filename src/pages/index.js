@@ -1,10 +1,12 @@
 import React from "react"
-import { Link } from "gatsby"
+import "../styles/global.css"
+
+import Navigation from '../components/Navigation/index.js'
 
 const IndexPage = () => (
-  <div>
-    <h1>ayy... nothing here!</h1>
-  </div>
+  <main>
+   <Navigation  activeTab = "Naslovna"/>
+  </main>
 )
 
 export default IndexPage

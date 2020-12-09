@@ -1,0 +1,33 @@
+.navigationMenu {
+    padding: 0px 5px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-flow: row;
+    width: fit-content;
+  }
+
+  .navigationMenu ul{
+    display: flex;
+    align-items: stretch; /* Default */
+    justify-content: space-between;
+    margin: 0 -10px;
+  }
+
+  .navigationMenu li {
+    margin: 0 10px;
+    padding: 5px 0px;
+    list-style: none;
+    font-size: 14px;
+    line-height: 3px;
+    color: darkgray
+  }
+
+  .navigationMenu li:hover {
+    border-bottom: 2px solid darkgray;
+    cursor: pointer;
+  }
+  
+  .navigationMenu .active, .navigationMenu .active:hover{
+    color: #591C0B;
+    border-bottom: 2px solid #591C0B;
+  }
