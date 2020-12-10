@@ -1,0 +1,11 @@
+.header {
+    font-size: 15px;
+}
+.social_media_list {
+    display: flex;
+    justify-content: flex-start;
+}
+.social_media_list * {
+    font-size: 35px;
+    margin: 5px 5px 5px 0;
+}
