@@ -1,8 +1,10 @@
 import React from "react"
-import ContactBar from "../components/contact-bar"
+import HeaderFooterLayout from "../layout/header-footer"
 
 const IndexPage = () => (
-  <ContactBar/>
+  <HeaderFooterLayout>
+    {}
+  </HeaderFooterLayout>
 )
 
 export default IndexPage
