@@ -1,0 +1,11 @@
+.menu_list {
+    list-style-type: none;
+    padding: 0;
+}
+.menu_list li {
+    margin: 5px 0;
+    font-size: 13px;
+}
+.header {
+    font-size: 15px;
+}
