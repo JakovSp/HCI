@@ -1,11 +1,9 @@
 import React from 'react'
 import styles from './style.module.css'
-import Logoimg from './../../images/Logo.png'
+import Logoimg from './../../images/new-logo.svg'
 
 const Logo = () => (
-  <section className={styles.logo}>
-      <img src={Logoimg}></img>
-  </section>
+    <img className={styles.logo} src={Logoimg}></img>
 )
 
 export default Logo

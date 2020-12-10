@@ -1,7 +1,6 @@
 import React from "react"
-import "../styles/global.css"
 
-import NavigationHeader from '../components/NavigationHeader/index.js'
+import NavigationHeader from '../components/NavigationHeader'
 
 const IndexPage = () => (
   <main>

@@ -2,4 +2,6 @@
   display: flex;
   flex-flow: column;
   width: fit-content;
+  width: 35%;
+  height: 35%;
 }
