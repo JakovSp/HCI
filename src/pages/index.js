@@ -1,10 +1,11 @@
 import React from "react"
-
 import NavigationHeader from '../components/NavigationHeader'
+import ContactBar from "../components/contact-bar"
 
 const IndexPage = () => (
   <main>
-   <NavigationHeader/>
+    <ContactBar/>
+    <NavigationHeader/>
   </main>
 )
 
