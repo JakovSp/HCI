@@ -1,20 +1,18 @@
-import React from 'react'
+import React,{useState} from 'react'
 import styles from './style.module.css'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
-import { navTabs } from '../../constants/constant.js'
-import { dropDownTabs } from '../../constants/constant.js'
+import DropDown from '../Dropdown'
 
+import * as constants from '../../constants/constant.js'
 
 const NavigationMenu = ({activeTab}) => (
-    <nav className={styles.navigationMenu}>
+   <nav className={styles.navigationMenu}>
       <ul>
-      {navTabs.map(tab => <li className={tab === activeTab ? styles.active : ''}>
-        {tab}
-        { dropDownTabs.includes(tab) ? 
-          <FontAwesomeIcon icon={faChevronDown} style={  {paddingLeft: "5px"}} /> : 
+      { constants.navTabs.map(tab => <li >
+        <p className={tab === activeTab ? styles.active : ''} >{tab}</p>
+        { constants.dropDownTabs.includes(tab) ?
+          <DropDown list={constants.DropHash[tab]} /> : 
           ''}
-        </li>
+        </li> 
       )}
       </ul>
     </nav>

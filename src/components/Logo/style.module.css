@@ -1,7 +1,6 @@
 .logo {
   display: flex;
   flex-flow: column;
-  width: fit-content;
-  width: 35%;
-  height: 35%;
+  width:  55%;
+  height: 55%;
 }

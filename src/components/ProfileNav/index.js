@@ -5,7 +5,7 @@ import styles from './style.module.css'
 const ProfileNav = ({loggedIn}) => (
     <section className={styles.profile}>
     {/* <li> Košarica </li> */}
-    <li> Prijava </li>
+    <li className={styles.prijava} > Prijava </li>
     </section>
 )
 
