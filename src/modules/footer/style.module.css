@@ -1,7 +1,11 @@
 .footer {
     background-color: #333333;
     color: #ccc;
+<<<<<<< HEAD
 
+=======
+    margin: 100px 0 0 0;
+>>>>>>> development
     display: flex;
     flex-direction: column;
 
