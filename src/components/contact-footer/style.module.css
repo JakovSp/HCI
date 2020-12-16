@@ -1,0 +1,11 @@
+.contact_list {
+    list-style-type: none;
+    padding: 0;
+}
+.contact_list li {
+    margin: 5px 0;
+    font-size: 13px;
+}
+.header {
+    font-size: 15px;
+}

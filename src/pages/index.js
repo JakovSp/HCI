@@ -1,12 +1,10 @@
 import React from "react"
-import NavigationHeader from '../components/NavigationHeader'
-import ContactBar from "../components/contact-bar"
+import HeaderFooterLayout from "../layout/header-footer"
 
 const IndexPage = () => (
-  <main>
-    <ContactBar/>
-    <NavigationHeader/>
-  </main>
+  <HeaderFooterLayout>
+    {}
+  </HeaderFooterLayout>
 )
 
 export default IndexPage
