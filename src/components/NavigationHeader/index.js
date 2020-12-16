@@ -5,7 +5,7 @@ import ProfileNav from '../ProfileNav/index.js'
 
 const NavigationHeader = ({activeTab}) => (
   <section className={styles.header}  >
-    <Navigation  activeTab = "Naslovna"/>
+    <Navigation  activeTab={activeTab}/>
     <ProfileNav />
   </section>
 )

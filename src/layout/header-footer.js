@@ -1,12 +1,10 @@
 import React from 'react'
-import ContactBar from '../components/contact-bar'
 import Footer from '../modules/footer'
-import NavigationHeader from '../components/NavigationHeader'
+import Header from '../modules/header'
 
-const HeaderFooterLayout = ({children}) => (
+const HeaderFooterLayout = ({activeTab},{children}) => (
     <>
-        <ContactBar/>
-        <NavigationHeader />
+        <Header activeTab={activeTab}/>
             {children}
         <Footer/>
     </>
