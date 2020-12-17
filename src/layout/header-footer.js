@@ -2,7 +2,7 @@ import React from 'react'
 import Footer from '../modules/footer'
 import Header from '../modules/header'
 
-const HeaderFooterLayout = ({activeTab},{children}) => (
+const HeaderFooterLayout = ({children, activeTab}) => (
     <>
         <Header activeTab={activeTab}/>
             {children}

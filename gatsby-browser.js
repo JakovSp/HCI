@@ -6,3 +6,5 @@
 
 // You can delete this file if you're not using it
 import './src/global/global.css'
+import 'bootstrap/dist/css/bootstrap.min.css'
+
