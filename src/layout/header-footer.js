@@ -1,10 +1,10 @@
 import React from 'react'
-import ContactBar from '../components/contact-bar'
 import Footer from '../modules/footer'
+import Header from '../modules/header'
 
-const HeaderFooterLayout = ({children}) => (
+const HeaderFooterLayout = ({children, activeTab}) => (
     <>
-        <ContactBar/>
+        <Header activeTab={activeTab}/>
             {children}
         <Footer/>
     </>
