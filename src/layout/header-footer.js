@@ -1,5 +1,13 @@
 import React from 'react'
- 
-const HeaderFooterLayout = ({children}) => ({})
- 
+import Footer from '../modules/footer'
+import Header from '../modules/header'
+
+const HeaderFooterLayout = ({children, activeTab}) => (
+    <>
+        <Header activeTab={activeTab}/>
+            {children}
+        <Footer/>
+    </>
+)
+
 export default HeaderFooterLayout

@@ -1,8 +1,11 @@
 import React from "react"
-import ContactBar from "../components/contact-bar"
+import HeaderFooterLayout from "../layout/header-footer"
+import HomePageBanner from "../modules/home-page-banner"
 
 const IndexPage = () => (
-  <ContactBar/>
+  <HeaderFooterLayout activeTab="Naslovna">
+    <HomePageBanner/>
+  </HeaderFooterLayout>
 )
 
 export default IndexPage
