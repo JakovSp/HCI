@@ -22,6 +22,9 @@
   font-weight: bold;
 }
 
+.tablink{
+  text-decoration: none;
+}
 
 .navigationMenu li:not(.active):hover{
   cursor: pointer;
