@@ -15,11 +15,12 @@
 .navigationMenu ul li {
   display: flex;
   align-items: flex-start;
-  margin: 0 15px;
+  margin: 0 20px;
   list-style: none;
-  font-size: 16px;
+  font-size: 17px;
   color: #004e7c;
   font-weight: bold;
+  padding-bottom: 3px;
 }
 
 .tablink{
@@ -40,5 +41,5 @@
 .navigationMenu .active, .active:hover{
   cursor: pointer;
   color: #004e7c;
-  border-bottom: 3px solid  #004e7c;
+  border-bottom: 2px solid  #004e7c;
 }
