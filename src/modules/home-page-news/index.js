@@ -5,7 +5,7 @@ import styles from './style.module.css'
 
 const HomePageNews = () => (
     <main className={styles.container}>
-        <SectionTitle />
+        <SectionTitle title="Novosti" subtitle="Najnovije vijesti vezane za PK Rockreacija, tečajeve i izlete"/>
         <NewsSection />
     </main>
 )
