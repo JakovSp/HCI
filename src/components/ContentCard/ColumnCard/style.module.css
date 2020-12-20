@@ -1,0 +1,22 @@
+.card{
+    display: flex;
+    flex-direction: column;
+    background: #E3E3E3;
+}
+
+.image{
+    display: flex;
+    flex-grow: 2;
+}
+
+.desc{
+    display: flex;
+    flex-grow: 1;
+    margin: 0px;
+    padding: 15px 0px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 0px;
+    min-width: 100%;
+}
