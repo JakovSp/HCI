@@ -1,10 +1,12 @@
 import React from 'react'
 import styles from "./style.module.css"
-const Card = ({Image,Text}) => (
+
+const RowCard = ({Image,Text,Style}) => (
+
     <div className={styles.card}>
-        <Image className={styles.image}/>
+        <Image className={styles.image} style={{flexDirection: Style}} />
         <p className={styles.desc}>{Text}</p>
     </div>
 )
 
-export default Card
+export default RowCard
