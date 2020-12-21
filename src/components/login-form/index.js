@@ -21,8 +21,8 @@ const LoginForm = () => {
             </div>
             <div className={styles.input_container}>
                 <FontAwesomeIcon className={styles.input_image} icon={faKey} color="black" />
-                <FontAwesomeIcon className={styles.show_hide_image} icon={passwordShown ? faEye : faEyeSlash} color="black" onClick={togglePasswordVisiblity} />
-                <input type={passwordShown ? "password" : "text"} placeholder="Lozinka"/>
+                <FontAwesomeIcon className={styles.show_hide_image} icon={passwordShown ? faEyeSlash : faEye} color="black" onClick={togglePasswordVisiblity} />
+                <input type={passwordShown ? "text" : "password"} placeholder="Lozinka"/>
             </div>
             <div className={styles.text_container}>
                 <div className={styles.checkbox_container}>
