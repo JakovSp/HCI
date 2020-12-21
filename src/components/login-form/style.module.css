@@ -1,0 +1,106 @@
+.login_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: white;
+    height: 500px;
+    width: 400px;
+    margin: 100px auto 0;
+    padding: 30px 20px;
+    border-style: solid;
+    border-color: #92a8d1;
+    border-width: thin;
+    border-radius: 5px;
+    -moz-box-shadow:    1px 1px 5px 1px #ccc;
+    -webkit-box-shadow: 1px 1px 5px 1px #ccc;
+    box-shadow:         1px 1px 5px 1px #ccc;
+}
+.login_container img {
+    width: 50px;
+    height: 50px;
+}
+.login_form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+}
+input[type=submit] {
+    background-color: #004e7c;
+    color: #f6f7f9;
+    border-radius: 5px;
+    font-size: 17px;
+    padding: 14px 20px;
+    margin: 10px 0;
+    border: none;
+    cursor: pointer;
+    transition: 0.2s;
+    font-family: montserrat;
+}
+input[type=email], select {
+    width: 100%;
+    font-size: 15px;
+    padding: 12px 45px;
+    margin: 10px 0;
+    display: inline-block;
+    border: 1px solid #004e7c;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: montserrat;
+} 
+input[type=password], select {
+    width: 100%;
+    padding: 12px 45px;
+    font-size: 15px;
+    margin: 10px 0;
+    display: inline-block;
+    border: 1px solid #004e7c;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: montserrat;
+}
+input[type=submit]:hover {
+    background-color: #013553;
+}
+.text_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0px;
+}
+.text_container > * {
+    font-size: 15px;
+}
+.checkbox_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+}
+.reg_container {
+    text-align: center;
+}
+.reg_container p {
+    font-size: 17px;
+}
+.reg_container a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #004e7c;
+}
+.input_container { 
+    position: relative; 
+} 
+.input_image{ 
+    position: absolute; 
+    left: 15px; 
+    top: 23px; 
+    color: #004e7c; 
+    font-size: 18px;
+} 
