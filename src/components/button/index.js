@@ -1,8 +1,8 @@
 import React from 'react'
-import styles from './style.module.css'
+import { Link } from 'gatsby'
 
 const Button = ({text, style}) => (
-    <a href="#" className={style}>{text}</a>
+    <Link to="/login" className={style}>{text}</Link>
 )
 
 export default Button
