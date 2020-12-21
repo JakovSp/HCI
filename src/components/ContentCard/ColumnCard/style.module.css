@@ -10,10 +10,11 @@
 }
 
 .desc{
+    font-size: 2vh;
     display: flex;
     flex-grow: 1;
     margin: 0px;
-    padding: 15px 0px;
+    padding: 5vh 0px;
     justify-content: center;
     align-items: center;
     text-align: center;

@@ -2,7 +2,8 @@
     display: flex;
     flex-direction: row;
     background: #E3E3E3;
-    border: solid 2px #591C0B;
+    border: solid 0.3vh #591C0B;
+    cursor: pointer;
 }
 
 .image{
@@ -10,10 +11,11 @@
 }
 
 .desc{
+    font-size: 2vh;
     display: flex;
     flex-grow: 2;
     margin: 0px;
-    padding: 15px 135px;
+    padding: 4vh 7vw;
     justify-content: center;
     align-items: center;
     text-align: center;

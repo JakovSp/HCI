@@ -7,6 +7,7 @@ import Druga from "../components/Images/Tecajevi/Druga"
 import Treca from "../components/Images/Tecajevi/Treca"
 import Dvorana from "../components/Images/Tecajevi/Dvorana"
 import Teren from "../components/Images/Tecajevi/Teren"
+import Literatura from "../components/Images/Tecajevi/Literatura"
 
 import styles from "./Tecajevi.module.css"
 
@@ -21,6 +22,7 @@ const TecajeviPage = () => (
       </div>
       <div className={styles.deck}>
         <RowCard Image={Dvorana} Text={"Dvorana"}/>
+        <RowCard Image={Literatura} Text={"Literatura"} />
         <RowCard Image={Teren} Text={"Teren"} />
       </div>
     </div>

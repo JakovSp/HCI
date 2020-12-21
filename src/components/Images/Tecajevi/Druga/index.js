@@ -7,15 +7,17 @@ const data = useStaticQuery(graphql`
 query {
     myImage: file(relativePath: { eq: "Tecajevi/teamwork.jpg" }) {
         childImageSharp {
-            fixed(width: 250) {
-                ...GatsbyImageSharpFixed
+            fluid(quality: 90, maxWidth: 2000) {
+                ...GatsbyImageSharpFluid_withWebp
             }  
         }
     }
 }
 `);
 return (
-    <Img fixed={data.myImage.childImageSharp.fixed} />
+    <div style={{width: "20vw", objectFit: "cover"}}>
+        <Img fluid={data.myImage.childImageSharp.fluid} />
+    </div>
 )
 }
 
