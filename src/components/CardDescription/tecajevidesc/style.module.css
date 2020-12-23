@@ -1,0 +1,17 @@
+.top{
+    font-size: 3vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding: 2vh 3vw;
+}
+
+.bottom{
+    font-size: 3vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding: 4vh 5.5vw;
+}

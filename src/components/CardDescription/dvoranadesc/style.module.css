@@ -1,0 +1,21 @@
+.formdesc{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0 5vw;
+    font-size: 2.5vh;
+    justify-content: space-between;
+}
+
+.bottomform{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 5vh;
+}
+
+.bottomform p{
+    margin: 0;
+    padding: 0;
+}
