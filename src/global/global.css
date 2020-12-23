@@ -17,3 +17,9 @@ body {
     font-family: montserrat;
     src: local('Montserrat'), url(../fonts/Montserrat-Regular.ttf) format('truetype');
   }
+
+:root {
+    --highlight-background: #591C0B;
+    --highlight-foreground: white;
+    --color-disabled: #C2C2C2;
+}

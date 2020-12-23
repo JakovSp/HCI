@@ -1,0 +1,29 @@
+.button{
+    display: flex;
+    font-weight:bold;
+    font-size: 2.5vh;
+    text-align: center;
+    align-items: center;
+    margin: 0;
+    padding: 1vh 2vw;
+    border: solid .4vh var(--highlight-background);
+    color: var(--highlight-background);
+    background-color: var(--highlight-foreground);
+}
+
+@keyframes buttonhover{
+    from{
+        background-color: var(--highlight-foreground);
+        color: var(--highlight-background);
+    }
+    to{
+        background-color: var(--highlight-background);
+        color: var(--highlight-foreground);
+    }
+}
+.button:hover{
+    cursor: pointer;
+    background-color: var(--highlight-background);
+    color: var(--highlight-foreground);
+    animation: buttonhover .28s ease-out;
+}
