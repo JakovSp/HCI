@@ -1,0 +1,24 @@
+.card{
+    display: flex;
+    background: #E3E3E3;
+}
+
+.image{
+    display: flex;
+    flex: 2;
+}
+
+.rowdesc{
+    display: flex;
+    flex: 1;
+    margin: 0px;
+
+ }
+
+ .columndesc{
+    display: flex;
+    flex-grow: 1;
+    margin: 0px;
+    width: 0;
+    min-width: 100%;
+ }

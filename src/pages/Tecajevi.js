@@ -1,13 +1,7 @@
 import React from "react"
 import HeaderFooterLayout from "../layout/header-footer"
-import ColumnCard from "../components/ContentCard/ColumnCard"
-import RowCard   from "../components/ContentCard/RowCard"
-import Prva from "../components/Images/Tecajevi/Prva"
-import Druga from "../components/Images/Tecajevi/Druga"
-import Treca from "../components/Images/Tecajevi/Treca"
-import Dvorana from "../components/Images/Tecajevi/Dvorana"
-import Teren from "../components/Images/Tecajevi/Teren"
-import Literatura from "../components/Images/Tecajevi/Literatura"
+import ContentCard from "../components/ContentCard"
+import * as images from "../components/Images/Tecajevi"
 
 import styles from "./Tecajevi.module.css"
 
@@ -16,14 +10,13 @@ const TecajeviPage = () => (
   <HeaderFooterLayout activeTab="Tečajevi">
     <div className={styles.page}>
       <div className={styles.deck}>
-        <ColumnCard Image={Prva} Text={"Pobijedite strah of visine"} />
-        <ColumnCard Image={Druga} Text={"Naučite vrijednosti timskog rada"} />
-        <ColumnCard Image={Treca} Text={"Osvjestite svoje tijelo"} />
+        <ContentCard className={styles.card} Image={images.Prva}   Direction={"column"} Text={"Pobijedite strah of visine"} />
+        <ContentCard Image={images.Druga}  Direction={"column"} Text={"Naučite vrijednosti timskog rada"}/>
+        <ContentCard Image={images.Treca}  Direction={"column"} Text={"Osvjestite svoje tijelo"} />
       </div>
       <div className={styles.deck}>
-        <RowCard Image={Dvorana} Text={"Dvorana"}/>
-        <RowCard Image={Literatura} Text={"Literatura"} />
-        <RowCard Image={Teren} Text={"Teren"} />
+        <ContentCard Border={true} Image={images.Dvorana}  Direction={"row"} Text={"Dvorana"}  />
+        <ContentCard Border={true} Image={images.Teren}    Direction={"row"} Text={"Teren"} />
       </div>
     </div>
 
