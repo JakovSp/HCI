@@ -1,0 +1,28 @@
+.header{
+    display: flex;
+    flex-direction: row;
+    background-color: var(--color-tabs);
+    justify-content: space-evenly;
+    margin: 4vh 0;
+}
+
+.header li{
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    list-style: none;
+    align-items: center;
+    margin: 0 3vw;
+}
+
+.active{
+    background-color: var(--highlight-foreground);
+    font-weight: bold;
+}
+.header li:not(.active){
+    cursor: pointer;
+}
+.header p{
+    margin: 0;
+    font-size: 2.5vh;
+}    
