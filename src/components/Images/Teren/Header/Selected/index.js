@@ -19,7 +19,7 @@ const Selected = ({ImageName}) => {
           }  
         }
       }
-      Kozjak: file(relativePath: { eq: "Teren/header/Kozjak-selected.png" }) {
+      Kozjak: file(relativePath: { eq: "Teren/header/kozjak-selected.jpg" }) {
         childImageSharp {
         fluid(quality: 90, maxWidth: 2000) {
           ...GatsbyImageSharpFluid_withWebp
@@ -33,7 +33,7 @@ const Selected = ({ImageName}) => {
           }  
         }
       }
-      Bjelolasica: file(relativePath: { eq: "Teren/header/bjelolasica-selected.png" }) {
+      Mosor: file(relativePath: { eq: "Teren/header/mosor-selected.jpg" }) {
         childImageSharp {
         fluid(quality: 90, maxWidth: 2000) {
           ...GatsbyImageSharpFluid_withWebp
