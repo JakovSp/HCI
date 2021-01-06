@@ -1,0 +1,111 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    margin: 30px 0 0 0;
+    padding: 0;
+    width: 100%;
+}
+.control_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+}
+.hikings_container_month {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 30px 0 0 0;
+    gap: 30px;
+}
+.hikings_container_month > * {
+    flex: 1 0 25%;
+}
+.hikings_container_year {
+    display: flex;
+    flex-flow: row wrap;
+    height: 100%;
+    width: 100%;
+    margin-top: 30px;
+    align-items: stretch;
+    gap: 30px;
+}
+.hikings_container_year > * {
+    flex: 1 0 300px;
+}
+.no_hikings_message {
+    text-align: center;
+    margin: 50px 0 0 0;
+    font-family: montserrat-bold;
+}
+.inner_control_container {
+    display: flex;
+    flex-direction: row;
+    width: 250px;
+    font-size: 16px;
+    justify-content: space-around;
+    font-weight: bold;
+}
+.current_month_button_disable {
+    opacity: .3;
+    pointer-events: none;
+    padding: 10px 30px;
+    background-color: #B73225;
+    border-color: #B73225;
+    color: #f6f7f9;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.1s;
+    max-width: 150px;
+    text-align: center;
+}
+.current_month_button_enable {
+    opacity: 1;
+    pointer-events: all;
+    cursor: pointer;
+    padding: 10px 30px;
+    background-color: #B73225;
+    border-color: #B73225;
+    color: #f6f7f9;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.1s;
+    max-width: 150px;
+    text-align: center;
+}
+.current_month_button_enable:hover{
+  color: #f6f7f9;
+  background-color: #cc463a;
+  border-color: #cc463a;
+}
+.current_month_button_enable:active {
+  color: #f6f7f9;
+  background-color: #cc463a;
+  border-color: #cc463a;
+  box-shadow: 0 0 0 0.2rem #b97f67;
+}
+.arrow_disable {
+    font-size: 18px;
+    opacity: .3;
+    pointer-events: none;
+}
+.arrow_enable {
+    font-size: 18px;
+    opacity: 1;
+    cursor: pointer;
+}
+.month_title {
+    font-size: 18px;
+    margin:0 auto;
+    text-align: center;
+}
+.button_group_active {
+    cursor: pointer;
+    background-color: #cc463a;
+    border-color: #cc463a;
+}
+.button_group_unactive {
+    cursor: pointer;
+}
