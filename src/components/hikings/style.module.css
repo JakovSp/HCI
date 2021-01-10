@@ -3,7 +3,6 @@
     flex-direction: column;
     margin: 30px 0 0 0;
     padding: 0;
-    width: 100%;
 }
 .control_container {
     display: flex;
@@ -13,25 +12,17 @@
     height: 50px;
 }
 .hikings_container_month {
-    display: flex;
-    flex-flow: row wrap;
-    margin: 30px 0 0 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: 30px;
-}
-.hikings_container_month > * {
-    flex: 1 0 25%;
+    margin: 30px 0 0 0;
 }
 .hikings_container_year {
-    display: flex;
-    flex-flow: row wrap;
-    height: 100%;
-    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
     margin-top: 30px;
     align-items: stretch;
-    gap: 30px;
-}
-.hikings_container_year > * {
-    flex: 1 0 300px;
 }
 .no_hikings_message {
     text-align: center;
@@ -49,6 +40,8 @@
 .current_month_button_disable {
     opacity: .3;
     pointer-events: none;
+    overflow: hidden;
+    position: relative;
     padding: 10px 30px;
     background-color: #B73225;
     border-color: #B73225;
@@ -56,13 +49,15 @@
     border-radius: 5px;
     text-decoration: none;
     font-size: 16px;
-    transition: 0.1s;
+    transition: opacity 0.1s;
     max-width: 150px;
     text-align: center;
 }
 .current_month_button_enable {
     opacity: 1;
     pointer-events: all;
+    overflow: hidden;
+    position: relative;
     cursor: pointer;
     padding: 10px 30px;
     background-color: #B73225;
@@ -71,7 +66,7 @@
     border-radius: 5px;
     text-decoration: none;
     font-size: 16px;
-    transition: 0.1s;
+    transition: opacity 0.1s;
     max-width: 150px;
     text-align: center;
 }
@@ -79,12 +74,6 @@
   color: #f6f7f9;
   background-color: #cc463a;
   border-color: #cc463a;
-}
-.current_month_button_enable:active {
-  color: #f6f7f9;
-  background-color: #cc463a;
-  border-color: #cc463a;
-  box-shadow: 0 0 0 0.2rem #b97f67;
 }
 .arrow_disable {
     font-size: 18px;
@@ -103,9 +92,13 @@
 }
 .button_group_active {
     cursor: pointer;
+    overflow: hidden;
+    position: relative;
     background-color: #cc463a;
     border-color: #cc463a;
 }
 .button_group_unactive {
     cursor: pointer;
+    overflow: hidden;
+    position: relative;
 }
