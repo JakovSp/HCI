@@ -28,7 +28,7 @@
     width: 100%;
     margin-bottom: 30px;
 }
-input[type=submit] {
+input[type=button] {
     background-color: #004e7c;
     color: #f6f7f9;
     border-radius: 5px;
@@ -73,7 +73,7 @@ input[type=text], select {
     box-sizing: border-box;
     font-family: montserrat;
 }
-input[type=submit]:hover {
+input[type=button]:hover {
     background-color: #013553;
 }
 .text_container {
