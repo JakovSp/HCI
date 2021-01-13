@@ -19,7 +19,7 @@
 .registration_container img {
     width: 50px;
     height: 50px;
-    margin-bottom: 50px;
+    margin-bottom: 10px;
 }
 .registration_form {
     display: flex;
@@ -28,9 +28,21 @@
     width: 100%;
     margin-bottom: 30px;
 }
-input[type=submit] {
+.registration_form_disable {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+    margin-bottom: 30px;
+}
+.registration_form_disable > * {
+    pointer-events: none;
+    opacity: 0.3;
+}
+input[type=button] {
     background-color: #004e7c;
     color: #f6f7f9;
+    width: 100%;
     border-radius: 5px;
     font-size: 17px;
     padding: 14px 20px;
@@ -46,7 +58,7 @@ input[type=email], select {
     padding: 12px 45px;
     margin: 10px 0;
     display: inline-block;
-    border: 1px solid #004e7c;
+    border: 1px solid;
     border-radius: 4px;
     box-sizing: border-box;
     font-family: montserrat;
@@ -57,7 +69,7 @@ input[type=password], select {
     font-size: 15px;
     margin: 10px 0;
     display: inline-block;
-    border: 1px solid #004e7c;
+    border: 1px solid;
     border-radius: 4px;
     box-sizing: border-box;
     font-family: montserrat;
@@ -68,12 +80,12 @@ input[type=text], select {
     font-size: 15px;
     margin: 10px 0;
     display: inline-block;
-    border: 1px solid #004e7c;
+    border: 1px solid;
     border-radius: 4px;
     box-sizing: border-box;
     font-family: montserrat;
 }
-input[type=submit]:hover {
+input[type=button]:hover {
     background-color: #013553;
 }
 .text_container {
@@ -117,6 +129,13 @@ input[type=submit]:hover {
     color: #004e7c; 
     font-size: 18px;
 }
+.input_container p {
+    margin: 0;
+    font-size: 14px;
+    color:  #FF0033;
+    font-family: montserrat-medium;
+    margin-top: -5px;
+}
 .show_hide_image {
     position: absolute; 
     right: 15px; 
@@ -124,3 +143,80 @@ input[type=submit]:hover {
     color: #004e7c; 
     font-size: 18px;
 }
+.disabled_link {
+    opacity: 0.3;
+    pointer-events: none;
+}
+.error_message {
+    background-color: #FF0033;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 40px;
+    width: 100%;
+    border-radius: 5px;
+}
+.error_message p {
+    margin: auto;
+    font-size: 15px;
+    font-weight: bold;
+}
+.error_message img {
+    margin: auto;
+    width: 30px;
+    height: 30px;
+}
+
+.loader{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+  
+  .circular{
+    animation: rotate 2s linear infinite;
+    height: 100px;
+    position: relative;
+    width: 100px;
+}
+  
+  .path {
+    stroke-dasharray: 1,200;
+    stroke-dashoffset: 0;
+    stroke:#B6463A;
+    animation:
+    dash 1.5s ease-in-out infinite,
+    color 6s ease-in-out infinite;
+    stroke-linecap: round;
+  }
+  
+  @keyframes rotate{
+   100%{
+    transform: rotate(360deg);
+   }
+  }
+  @keyframes dash{
+   0%{
+    stroke-dasharray: 1,200;
+    stroke-dashoffset: 0;
+   }
+   50%{
+    stroke-dasharray: 89,200;
+    stroke-dashoffset: -35;
+   }
+   100%{
+    stroke-dasharray: 89,200;
+    stroke-dashoffset: -124;
+   }
+  }
+  @keyframes color{
+    100%, 0%{
+      stroke: #004e7c;
+    }
+  }
