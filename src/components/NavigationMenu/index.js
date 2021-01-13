@@ -1,20 +1,15 @@
-import React,{useState} from 'react'
+import React from 'react'
 import styles from './style.module.css'
-import DropDown from '../Dropdown'
-
-import * as constants from '../../constants/constant.js'
+import { Link } from 'gatsby'
+import { navTabs } from '../../constants/constant'
 
 const NavigationMenu = ({activeTab}) => (
    <nav className={styles.navigationMenu}>
-      <ul>
-      { constants.navTabs.map(tab => <li >
-        <p className={tab === activeTab ? styles.active : ''} >{tab}</p>
-        { constants.dropDownTabs.includes(tab) ?
-          <DropDown list={constants.DropHash[tab]} /> : 
-          ''}
-        </li> 
-      )}
-      </ul>
+      {navTabs.map(({tab, to}) => (
+      <Link to={to} >
+          <li className={ (tab === activeTab) ? styles.active : ''}>{tab}</li>
+      </Link>)
+    )}
     </nav>
   )
 

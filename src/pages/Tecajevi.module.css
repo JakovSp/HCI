@@ -1,0 +1,14 @@
+.page{
+    margin-bottom: 50px;
+}
+
+.deck {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    padding: 0px 150px;
+    padding-top: 40px;
+    margin: 0px;
+    min-height: 100%;
+}
+

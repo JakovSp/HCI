@@ -4,9 +4,12 @@ html {
     -webkit-text-size-adjust: 100%;
     height: 100%;
     width: 100%;
+    margin: 0;
+    padding: 0;
 }
 body {
     margin: 0;
+    padding: 0;
     background-color: #f6f7f9;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -16,4 +19,15 @@ body {
 @font-face {
     font-family: montserrat;
     src: local('Montserrat'), url(../fonts/Montserrat-Regular.ttf) format('truetype');
-  }
+}
+@font-face {
+    font-family: montserrat-bold;
+    src: local('Montserrat'), url(../fonts/Montserrat-Bold.ttf) format('truetype');
+}
+@font-face {
+    font-family: montserrat-medium;
+    src: local('Montserrat'), url(../fonts/Montserrat-Medium.ttf) format('truetype');
+}
+h5 {
+    margin: 0px;
+}

@@ -1,0 +1,13 @@
+.day_container {
+    position: relative;
+    display: inline-block;
+    color: white;
+    border-radius: 5px;
+    -moz-box-shadow:    1px 1px 5px 1px #ccc;
+    -webkit-box-shadow: 1px 1px 5px 1px #ccc;
+    box-shadow:         1px 1px 5px 1px #ccc;
+    text-align: center;
+}
+.day_container > * {
+    margin: 8px 8px;
+}
