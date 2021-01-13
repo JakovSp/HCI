@@ -1,8 +1,11 @@
-export const navTabs = ['Naslovna', 'Tečajevi', 'Oprema', 'Izleti', 'Arhiva', 'Blog']
-// export const Tečajevi = ['Dvorana','Teren']
-// export const Izleti = ['Najave izleta','Kalendar']
-// export const dropDownTabs = ['Tečajevi','Izleti']
-// export const DropHash = {'Tečajevi':Tečajevi, 'Izleti':Izleti}
+export const navTabs = [
+    {tab: 'Naslovna', to: '/'},
+    {tab: 'Tečajevi', to: '/'}, 
+    {tab: 'Oprema', to: '/'}, 
+    {tab: 'Izleti', to: '/hiking'},
+    {tab: 'Arhiva', to: '/'},
+    {tab: 'Blog', to: '/'}
+]
 
 export const months = [
     { monthNumber: 1, monthName: 'Siječanj', monthColor: '#0297e7' },

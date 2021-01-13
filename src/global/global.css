@@ -15,8 +15,6 @@ body {
     -moz-osx-font-smoothing: grayscale;
     height: 100%;
     width: 100%;
-    overflow-y: hidden;
-    overflow-x: hidden;
 }
 @font-face {
     font-family: montserrat;
