@@ -22,11 +22,13 @@
     "gatsby-transformer-sharp": "^2.6.0",
     "gotrue-js": "^0.9.28",
     "prop-types": "^15.7.2",
-    "react": "^16.8.0",
-    "react-dom": "^16.8.0",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
     "react-fontawesome": "^1.7.1",
     "react-helmet": "^6.1.0",
-    "react-native-picker-select": "^8.0.4"
+    "react-is": "^16.13.1",
+    "react-native-picker-select": "^8.0.4",
+    "styled-components": "^5.2.1"
   },
   "devDependencies": {
     "prettier": "2.1.2"

@@ -3,7 +3,7 @@ import styles from './style.module.css'
 
 import { useStaticQuery, graphql } from "gatsby"
 
-import Card from '../card'
+import CardNews from '../card-news'
 
 const NewsSection = () => {
 
@@ -21,11 +21,11 @@ const NewsSection = () => {
 
   return (
     <main className={styles.news_card_container}>
-      <Card newsImage={data.myImage.childImageSharp.fluid} newsTitle="News title" newsDesc="Some quick example text to build on the card title and make up the bulk of the card's content."/>
-      <Card newsImage={data.myImage.childImageSharp.fluid} newsTitle="News title" newsDesc="Some quick example text to build on the card title and make up the bulk of the card's content."/>
-      <Card newsImage={data.myImage.childImageSharp.fluid} newsTitle="News title" newsDesc="Some quick example text to build on the card title and make up the bulk of the card's content."/>
-      <Card newsImage={data.myImage.childImageSharp.fluid} newsTitle="News title" newsDesc="Some quick example text to build on the card title and make up the bulk of the card's content."/>
-      <Card newsImage={data.myImage.childImageSharp.fluid} newsTitle="News title" newsDesc="Some quick example text to build on the card title and make up the bulk of the card's content."/>
+      <CardNews newsImage={data.myImage.childImageSharp.fluid} newsTitle="News title" newsDesc="Some quick example text to build on the card title and make up the bulk of the card's content."/>
+      <CardNews newsImage={data.myImage.childImageSharp.fluid} newsTitle="News title" newsDesc="Some quick example text to build on the card title and make up the bulk of the card's content."/>
+      <CardNews newsImage={data.myImage.childImageSharp.fluid} newsTitle="News title" newsDesc="Some quick example text to build on the card title and make up the bulk of the card's content."/>
+      <CardNews newsImage={data.myImage.childImageSharp.fluid} newsTitle="News title" newsDesc="Some quick example text to build on the card title and make up the bulk of the card's content."/>
+      <CardNews newsImage={data.myImage.childImageSharp.fluid} newsTitle="News title" newsDesc="Some quick example text to build on the card title and make up the bulk of the card's content."/>
     </main>
   )
   }

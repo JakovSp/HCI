@@ -1,0 +1,30 @@
+.group_container {
+    display: flex;
+    flex-direction: row;
+    border-radius: 5px;
+}
+.group_container a {
+    background-color: #B73225;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    text-align: center;
+    transition: 0.2s;
+    padding: 10px 30px;
+}
+.group_container > :nth-child(1) {
+    border-style: solid;
+    border-width: thin;
+    border-radius: 5px 0px 0px 5px;
+}
+.group_container > :nth-child(2) {
+    border-style: solid;
+    border-width: thin;
+    border-radius: 0px 5px 5px 0px;
+}
+.group_container > :nth-child(2):hover {
+    background-color: #cc463a;
+}
+.group_container > :nth-child(1):hover {
+    background-color: #cc463a;
+}

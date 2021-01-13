@@ -2,7 +2,7 @@ import React from 'react'
 import styles from './style.module.css'
 import Img from "gatsby-image"
 
-const Card = ({newsImage, newsTitle, newsDesc}) => (
+const CardNews = ({newsImage, newsTitle, newsDesc, footer}) => (
     <a href="#" className={styles.card_container}>
         <Img fluid={newsImage} className={styles.card_image} />
         <div className={styles.inner_card_container}>
@@ -12,8 +12,8 @@ const Card = ({newsImage, newsTitle, newsDesc}) => (
             </div>
             <p className={styles.card_desc}>{newsDesc}</p>
         </div>
-        <p href="#" className={styles.card_footer}>Objavljeno prije 19 minuta</p>
+        <p href="#" className={styles.card_footer}>{footer}</p>
     </a>
 )
 
-export default Card
+export default CardNews
