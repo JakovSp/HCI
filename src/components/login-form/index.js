@@ -20,9 +20,11 @@ const LoginForm = () => {
     const [emailError, setEmailError] = useState();
     const [passwordError, setPasswordError] = useState();
     const [isGeneralError, setIsGeneralError] = useState(false);
+    const [isSubmitted, setIsSubmitted] = useState(false);
     const generalErrorMessage = "E-mail adresa ili zaporka je netočna"
 
     async function attemptSignin(email, password, remember) {
+        setIsSubmitted(true)
         if(ValidateForm(email, password)) {
             setIsLoading(true)
             setIsGeneralError(false)
@@ -42,7 +44,7 @@ const LoginForm = () => {
         setEmailError(validation.emailValidation(email))
         setPasswordError(validation.passwordValidation(password))
         
-        if((emailError === null && passwordError === null) || (typeof(emailError) === "undefined" && typeof(passwordError) === "undefined")) { 
+        if((emailError === null && passwordError === null)) { 
             return true 
         } 
         else {
@@ -64,25 +66,21 @@ const LoginForm = () => {
         </div>
         <form className={ isLoading ? styles.login_form_disable : styles.login_form}>
             <div className={styles.input_container}>
-                <input type="email" placeholder="E-mail" onChange={e => { 
+                <input style={{ borderColor: (isSubmitted) ? ((emailError === null) || (typeof(emailError) === "undefined")) ? '#004e7c' : '#FF0033' : '' }} type="email" placeholder="E-mail" onChange={e => { 
                     setEmail(e.target.value)
-                    if(typeof(emailError) !== "undefined") {
-                        setEmailError(validation.emailValidation(e.target.value))
-                    }
+                    setEmailError(validation.emailValidation(e.target.value))
                 }}/>
                 <FontAwesomeIcon className={styles.input_image} icon={faEnvelope} color="black" />
-                <p>{emailError}</p>
+                <p>{ (isSubmitted) ? emailError : null }</p>
             </div>
             <div className={styles.input_container}>
                 <FontAwesomeIcon className={styles.input_image} icon={faKey} color="black" />
                 <FontAwesomeIcon className={styles.show_hide_image} icon={passwordShown ? faEyeSlash : faEye} color="black" onClick={togglePasswordVisiblity} />
-                <input type={passwordShown ? "text" : "password"} placeholder="Lozinka" onChange={e => { 
+                <input style={{ borderColor: (isSubmitted) ? ((passwordError === null) || (typeof(passwordError) === "undefined")) ? '#004e7c' : '#FF0033' : '' }} type={passwordShown ? "text" : "password"} placeholder="Lozinka" onChange={e => { 
                     setPassword(e.target.value)
-                    if(typeof(passwordError) !== "undefined") {
-                        setPasswordError(validation.passwordValidation(e.target.value))
-                    }
+                    setPasswordError(validation.passwordValidation(e.target.value))
                 }}/>
-                <p>{passwordError}</p>
+                <p>{ (isSubmitted) ? passwordError : null }</p>
             </div>
             <div className={styles.text_container}>
                 <div className={styles.checkbox_container}>

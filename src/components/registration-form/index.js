@@ -29,13 +29,15 @@ const RegistrationForm = () => {
     const [textErrorLastname, setTextErrorLastname] = useState();
     const [textErrorUsername, setTextErrorUsername] = useState();
     const [emailError, setEmailError] = useState();
+    const [isSubmitted, setIsSubmitted] = useState(false);
 
     const [passwordError, setPasswordError] = useState();
     const [confirmPasswordError, setConfirmPasswordError] = useState();
 
-    const generalErrorMessage = "Dogodila se greška. Molimo ponovite kasnije."
+    const generalErrorMessage = "Korisnik sa tom e-mail adresom već postoji."
 
     async function attemptSignup(firstname, lastname, username, email, password, confirmPassword) {
+        setIsSubmitted(true)
         if(ValidateForm(firstname, lastname, username, email, password, confirmPassword)) {
             setIsLoading(true)
             setIsGeneralError(false)
@@ -60,8 +62,7 @@ const RegistrationForm = () => {
         setTextErrorLastname(validation.textValidation(lastname))
         setConfirmPasswordError(validation.confirmPasswordValidation(password, confirmPassword))
 
-        if((emailError === null && passwordError === null && textErrorName === null && textErrorLastname === null && textErrorUsername === null && confirmPasswordError === null)
-        || (typeof(emailError) === "undefined" && typeof(passwordError) === "undefined" && typeof(textErrorName) === "undefined" && typeof(textErrorLastname) === "undefined" && typeof(passwotextErrorUsernamerdError) === "undefined" && typeof(confirmPasswordError) === "undefined")) { 
+        if((emailError === null && passwordError === null && textErrorName === null && textErrorLastname === null && textErrorUsername === null && confirmPasswordError === null)) { 
             return true 
         } 
         else {
@@ -83,66 +84,54 @@ const RegistrationForm = () => {
         </div>
         <form className={ isLoading ? styles.registration_form_disable : styles.registration_form}>
             <div className={styles.input_container}>
-                <input type="text" placeholder="Ime" onChange={e => {
+                <input style={{ borderColor: (isSubmitted) ? ((textErrorName === null) || (typeof(textErrorName) === "undefined")) ? '#004e7c' : '#FF0033' : '' }} type="text" placeholder="Ime" onChange={e => {
                     setFirstname(e.target.value)
-                    if(typeof(textErrorName) !== "undefined") {
-                        setTextErrorName(validation.textValidation(e.target.value))
-                    }
+                    setTextErrorName(validation.textValidation(e.target.value))
                 }}/>
                 <FontAwesomeIcon className={styles.input_image} icon={faUser} color="black" />
-                <p>{textErrorName}</p>
+                <p>{ (isSubmitted) ? textErrorName : null }</p>
             </div>
             <div className={styles.input_container}>
-                <input type="text" placeholder="Prezime" onChange={e => {
+                <input style={{borderColor: (isSubmitted) ? ((textErrorLastname === null) || (typeof(textErrorLastname) === "undefined")) ? '#004e7c' : '#FF0033' : ''}} type="text" placeholder="Prezime" onChange={e => {
                     setLastname(e.target.value)
-                    if(typeof(textErrorName) !== "undefined") {
-                        setTextErrorLastname(validation.textValidation(e.target.value))
-                    }
+                    setTextErrorLastname(validation.textValidation(e.target.value))
                 }}/>
                 <FontAwesomeIcon className={styles.input_image} icon={faUser} color="black" />
-                <p>{textErrorLastname}</p>
+                <p>{ (isSubmitted) ? textErrorLastname : null }</p>
             </div>
             <div className={styles.input_container}>
-                <input type="text" placeholder="Korisničko ime" onChange={e => { 
+                <input style={{borderColor: (isSubmitted) ? ((textErrorUsername === null) || (typeof(textErrorUsername) === "undefined")) ? '#004e7c' : '#FF0033' : ''}} type="text" placeholder="Korisničko ime" onChange={e => { 
                     setUsername(e.target.value)
-                    if(typeof(textErrorName) !== "undefined") {
-                        setTextErrorUsername(validation.textValidation(e.target.value))
-                    }
+                    setTextErrorUsername(validation.textValidation(e.target.value))
                 }}/>
                 <FontAwesomeIcon className={styles.input_image} icon={faUser} color="black" />
-                <p>{textErrorUsername}</p>
+                <p>{ (isSubmitted) ? textErrorUsername : null }</p>
             </div>
             <div className={styles.input_container}>
-                <input type="email" placeholder="E-mail" onChange={e => { 
+                <input style={{borderColor: (isSubmitted) ? ((emailError === null) || (typeof(emailError) === "undefined")) ? '#004e7c' : '#FF0033' : ''}} type="email" placeholder="E-mail" onChange={e => { 
                     setEmail(e.target.value)
-                    if(typeof(emailError) !== "undefined") {
-                        setEmailError(validation.emailValidation(e.target.value))
-                    }
+                    setEmailError(validation.emailValidation(e.target.value))
                 }}/>
                 <FontAwesomeIcon className={styles.input_image} icon={faEnvelope} color="black" />
-                <p>{emailError}</p>
+                <p>{ (isSubmitted) ? emailError : null}</p>
             </div>
             <div className={styles.input_container}>
                 <FontAwesomeIcon className={styles.input_image} icon={faKey} color="black" />
                 <FontAwesomeIcon className={styles.show_hide_image} icon={passwordShown ? faEyeSlash : faEye} color="black" onClick={togglePasswordVisiblity} />
-                <input type={passwordShown ? "text" : "password"} placeholder="Lozinka" onChange={e => { 
+                <input style={{borderColor: (isSubmitted) ? ((passwordError === null) || (typeof(passwordError) === "undefined")) ? '#004e7c' : '#FF0033' : ''}} type={passwordShown ? "text" : "password"} placeholder="Lozinka" onChange={e => { 
                     setPassword(e.target.value)
-                    if(typeof(passwordError) !== "undefined") {
-                        setPasswordError(validation.passwordValidation(e.target.value))
-                    }
+                    setPasswordError(validation.passwordValidation(e.target.value))
                 }}/>
-                <p>{passwordError}</p>
+                <p>{ (isSubmitted) ? passwordError : null}</p>
             </div>
             <div className={styles.input_container}>
                 <FontAwesomeIcon className={styles.input_image} icon={faKey} color="black" />
                 <FontAwesomeIcon className={styles.show_hide_image} icon={passwordConfirmShown ? faEyeSlash : faEye} color="black" onClick={togglePasswordConfirmVisiblity} />
-                <input type={passwordConfirmShown ? "text" : "password"} placeholder="Potvrdi lozinku" onChange={e => { 
+                <input style={{borderColor: (isSubmitted) ? ((confirmPasswordError === null) || (typeof(confirmPasswordError) === "undefined")) ? '#004e7c' : '#FF0033' : ''}} type={passwordConfirmShown ? "text" : "password"} placeholder="Potvrdi lozinku" onChange={e => { 
                     setConfirmPassword(e.target.value)
-                    if(typeof(confirmPasswordError) !== "undefined") {
-                        setConfirmPasswordError(validation.confirmPasswordValidation(password, e.target.value))
-                    }
+                    setConfirmPasswordError(validation.confirmPasswordValidation(password, e.target.value))
                 }}/>
-                <p>{confirmPasswordError}</p>
+                <p>{ (isSubmitted) ? confirmPasswordError : null}</p>
             </div>
             <input onClick={ () => attemptSignup(firstName, lastName, username, email, password, confirmPassword) } type="button" value = { isLoading ? "Učitavanje..." : "Registracija" }/>
         </form>

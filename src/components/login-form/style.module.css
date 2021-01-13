@@ -57,7 +57,7 @@ input[type=email], select {
     padding: 12px 45px;
     margin: 10px 0;
     display: inline-block;
-    border: 1px solid #004e7c;
+    border: 1px solid;
     border-radius: 4px;
     box-sizing: border-box;
     font-family: montserrat;
@@ -68,7 +68,7 @@ input[type=password], select {
     font-size: 15px;
     margin: 10px 0;
     display: inline-block;
-    border: 1px solid #004e7c;
+    border: 1px solid;
     border-radius: 4px;
     box-sizing: border-box;
     font-family: montserrat;
@@ -79,7 +79,7 @@ input[type=text], select {
     font-size: 15px;
     margin: 10px 0;
     display: inline-block;
-    border: 1px solid #004e7c;
+    border: 1px solid;
     border-radius: 4px;
     box-sizing: border-box;
     font-family: montserrat;
