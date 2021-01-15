@@ -15,7 +15,7 @@ query {
 }
 `);
 return (
-    <div style={{width: "18vw", objectFit: "cover"}}>
+    <div style={{width: "12rem", objectFit: "cover"}}>
         <Img fluid={data.myImage.childImageSharp.fluid} />
     </div>)
 }

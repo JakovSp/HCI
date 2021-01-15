@@ -19,8 +19,7 @@ export const Desc2 = () => (
     <div className={styles.formdesc}>
         <div className={styles.topform}>
             <h3>{"Penjački centar Marulianus"}</h3>
-            <p >Infromacije možete dobiti svaki radni dan 16-20h u prostorijama dvorane.</p>
-            <p> Raspored korištenja dvorane ima posebne periode za natjecatelje, predškolarce, tri generacije školaraca te za odrasle.</p>
+            <p >Infromacije možete dobiti svaki radni dan 16-20h u prostorijama dvorane. Raspored korištenja dvorane ima posebne periode za natjecatelje, predškolarce, tri generacije školaraca te za odrasle.</p>
         </div>
         <div className={styles.bottomform}>
             <Button Text={"Najavi"}/>
