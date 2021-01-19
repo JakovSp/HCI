@@ -3,8 +3,7 @@ export const navTabs = [
     {tab: 'Tečajevi', to: '/'}, 
     {tab: 'Oprema', to: '/'}, 
     {tab: 'Izleti', to: '/hiking'},
-    {tab: 'Arhiva', to: '/'},
-    {tab: 'Blog', to: '/'}
+    {tab: 'Blog', to: '/blog'}
 ]
 
 export const months = [
