@@ -1,0 +1,26 @@
+.page_container {
+    text-align: center;
+    margin-top: 100px;
+}
+.button {
+    padding: 10px 30px;
+    background-color: #004e7c;
+    border-color: #004e7c;
+    color: #f6f7f9;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.2s;
+    max-width: 100px;
+}
+.button:hover{
+    color: #f6f7f9;
+    background-color: #013553;
+    border-color: #013553;
+}
+.button:active, .login_button:focus {
+    color: #f6f7f9;
+    background-color: #013553;
+    border-color: #013553;
+    box-shadow: none;
+}

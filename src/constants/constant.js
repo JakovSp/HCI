@@ -20,10 +20,6 @@ export const months = [
     { monthNumber: 11, monthName: 'Studeni', monthColor: '#8f58c0' }, 
     { monthNumber: 12, monthName: 'Prosinac', monthColor: '#635bca' }
 ]
-export const navTabs = ['Naslovna', 'Tečajevi', 'Oprema', 'Izleti', 'Arhiva', 'Blog']
-// export const Tečajevi = ['Dvorana','Teren']
-// export const Izleti = ['Najave izleta','Kalendar']
-// export const dropDownTabs = ['Tečajevi','Izleti']
-// export const DropHash = {'Tečajevi':Tečajevi, 'Izleti':Izleti}
+
 export const Locations = ['Paklenica', 'Dinara', 'Kozjak', 'Mosor', 'Biokovo', 'Velebit']
 
