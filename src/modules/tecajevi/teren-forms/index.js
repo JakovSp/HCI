@@ -3,12 +3,11 @@ import styles from "./style.module.css"
 import TerenDescription from "../../../components/teren-description"
 import TerenHeader from "../../../components/teren-header"
 
-const TerenForm = () =>{
-    const [selectedLocation, setSelectedLocation] = useState("Paklenica")
+const TerenForm = ({selected, setSelected}) =>{
     return (
     <div className={styles.page}>
-        <TerenHeader selected={selectedLocation} setSelected={setSelectedLocation} />
-        <TerenDescription activeLocation={selectedLocation} />
+        <TerenHeader setSelected={setSelected} />
+        <TerenDescription activeLocation={selected}/>
     </div>
 )}
 

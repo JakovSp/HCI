@@ -7,7 +7,7 @@ import {Desc1,Desc2} from "../../../components/CardDescription/tecajevidesc"
 
 const Tabs=["Dvorana","Literatura","Teren"]
 
-const TecajeviForm = ({selected,setSelected}) => (
+const TecajeviForm = ({setSelected}) => (
     <div className={styles.page}>
         <div className={styles.deck}>
             <ContentCard Border={false} Direction={"column"} Image={ () => <TecajeviTop ImageName={"Prva"} />}  Text={<Desc1 Text="Pobijedite strah of visine" />} />

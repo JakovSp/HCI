@@ -21,10 +21,13 @@ export const months = [
     { monthNumber: 11, monthName: 'Studeni', monthColor: '#8f58c0' }, 
     { monthNumber: 12, monthName: 'Prosinac', monthColor: '#635bca' }
 ]
-export const navTabs = ['Naslovna', 'Tečajevi', 'Oprema', 'Izleti', 'Arhiva', 'Blog']
-// export const Tečajevi = ['Dvorana','Teren']
-// export const Izleti = ['Najave izleta','Kalendar']
-// export const dropDownTabs = ['Tečajevi','Izleti']
-// export const DropHash = {'Tečajevi':Tečajevi, 'Izleti':Izleti}
-export const Locations = ['Paklenica', 'Dinara', 'Kozjak', 'Mosor', 'Biokovo', 'Velebit']
 
+export const Locations = ['Paklenica', 'Dinara', 'Kozjak', 'Mosor', 'Biokovo', 'Velebit']
+export const LatLng = {
+        'Paklenica' : [44.3666652,  15.4333316],
+        'Dinara'    : [44.062475,   16.387691],
+        'Kozjak'    : [43.580894591913015, 16.405876175638145],
+        'Mosor'     : [43.533487978302546, 16.633118683550983],
+        'Biokovo'   : [43.32549550315907, 17.049166660128265],
+        'Velebit'   : [44.53209743394053, 15.235888421301288]    
+    }
