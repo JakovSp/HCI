@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
 import CardBlog from '../card-blog'
 import { useStaticQuery, graphql } from "gatsby"
+import { myLocalStorage } from '../../helpers/local-storage'
 
 const Blogs = () => {
 
@@ -34,6 +35,7 @@ const Blogs = () => {
   `)
 
     const dataFilter = data.allContentfulBlogPreview.nodes
+    myLocalStorage.removeItem("searchQuery")
     const [currentCategory, setCurrentCategory] = useState("Sve")
     const [visibleData, setVisibleData] = useState(data.allContentfulBlogPreview.nodes)
     const toggleCategory = (category) => {
@@ -46,6 +48,17 @@ const Blogs = () => {
             setVisibleData(newData)
         }
     };
+
+    function filterData(query) {
+        const newData = dataFilter.filter((el) => el.title.toLowerCase().includes(query?.toLowerCase()))
+        setVisibleData(newData)
+    }
+
+    let myMap = new Map()
+    myMap.set('Pustolovine', '#cf2233')
+    myMap.set('Oprema', '#2d63af')
+    myMap.set('Natjecanja', '#0c8142')
+    myMap.set('Preporuke', '#f26946')
 
     return(
     <main className={styles.container}>
@@ -69,16 +82,15 @@ const Blogs = () => {
             </div>
             <div className={styles.input_container}>
                 <input type="text" placeholder="Search.." name="search" onChange={ (e) => {
-                    const newData = dataFilter.filter((el) => el.title.toLowerCase().includes(e.target.value.toLowerCase()))
-                    setVisibleData(newData)
-                }}></input>
+                    filterData(e.target.value)
+                }}/>
                 <FontAwesomeIcon className={styles.input_image} icon={faSearch} color="black" />
             </div>
         </div>
         <div className={styles.blogs_container}>
             { visibleData.map(nodes => {
                 return (
-                    <CardBlog blogImage={nodes.image.fixed} blogTitle={nodes.title} blogDesc={nodes.description} blogFooter={nodes.author + ' • ' + '5 minuta čitanja'} />
+                    <CardBlog labelColor={myMap.get(nodes.category)} blogLabel={nodes.category} blogDestination={nodes.slug} blogImage={nodes.image.fixed} blogTitle={nodes.title} blogDesc={nodes.description} blogFooter={nodes.author + ' • ' + '5 minuta čitanja'} />
                 )
             }) }
         </div>

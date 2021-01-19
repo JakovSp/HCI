@@ -5,18 +5,18 @@ const setItem = (key, item) => {
     localStorage.setItem(key, item)
   }
    
-  const getItem = item => {
+  const getItem = key => {
     if (typeof window === 'undefined') {
       return null
     }
-    return localStorage.getItem(item)
+    return localStorage.getItem(key)
   }
    
-  const removeItem = item => {
+  const removeItem = key => {
     if (typeof window === 'undefined') {
       return null
     }
-    localStorage.removeItem(item)
+    localStorage.removeItem(key)
   }
    
   export const myLocalStorage = {

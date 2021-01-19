@@ -1,40 +1,38 @@
-// const path = require('path')
+const path = require('path')
 
-// exports.createPages = async ({ graphql, actions }) => {
-//   const raw = await graphql(`query {
-//     allContentfulBlogPreview {
-//       nodes {
-//         image {
-//           fixed(width: 300) {
-//             src
-//             srcSet
-//             srcSetWebp
-//             srcWebp
-//             width
-//             height
-//             base64
-//             aspectRatio
-//           }
-//         }
-//         category
-//         title
-//         description
-//         author
-//         slug
-//       }
-//     }
-//   }`)
+exports.createPages = async ({ graphql, actions }) => {
+  const raw = await graphql(`query {
+    allContentfulBlogPreview {
+      nodes {
+        image {
+            fluid(quality: 90, maxWidth: 1920) {
+              src
+              srcSet
+              srcSetWebp
+              srcWebp
+              base64
+              aspectRatio
+          }
+        }
+        category
+        title
+        description
+        author
+        body {
+          raw
+        }
+        slug
+      }
+    }
+  }`)
 
-//   const res = raw.data.allContentfulBlogPost.nodes
+  const res = raw.data.allContentfulBlogPreview.nodes
 
-//   res.forEach((e, index, array) => actions.createPage({
-//     component: path.resolve(`./src/layouts/blog.js`),
-//     context: {
-//       ...e,
-//       next: index < array.length ? array[index + 1] : null,
-//       prev: index > 0 ? array[index - 1] : null
-//     },
-//     path: `posts/${e.slug}`,
-//     slug: `posts/${e.slug}`
-//   }))
-// }
+  res.forEach((e) => actions.createPage({
+    component: path.resolve(`./src/pages/blog-post.js`),
+    context: {
+      ...e
+    },
+    path: `blog/${e.slug}`,
+  }))
+}

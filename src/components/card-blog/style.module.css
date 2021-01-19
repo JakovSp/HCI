@@ -44,6 +44,7 @@
     -ms-transform: translateZ(0); /* IE 9 */
     -webkit-transform: translateZ(0); /* Chrome, Safari, Opera */
     transform: translateZ(0);
+    position: absolute;
 }
 .card_title {
     font-size: 19px;
@@ -66,3 +67,15 @@
     flex-direction: row;
     align-items: center;
 }
+.labelContainer {
+    position: relative;
+}
+.label {
+    position: absolute;
+    top: 0;
+    margin-top: 10px;
+    padding: 8px;
+    background-color: green;
+    color: white;
+}
+
