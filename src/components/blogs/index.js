@@ -38,6 +38,7 @@ const Blogs = () => {
     myLocalStorage.removeItem("searchQuery")
     const [currentCategory, setCurrentCategory] = useState("Sve")
     const [visibleData, setVisibleData] = useState(data.allContentfulBlogPreview.nodes)
+    const [searchQuery, setSearchQuery] = useState()
     const toggleCategory = (category) => {
         setCurrentCategory(category);
         if(category === "Sve") {
@@ -82,17 +83,19 @@ const Blogs = () => {
             </div>
             <div className={styles.input_container}>
                 <input type="text" placeholder="Search.." name="search" onChange={ (e) => {
+                    setSearchQuery(e.target.value)
                     filterData(e.target.value)
                 }}/>
                 <FontAwesomeIcon className={styles.input_image} icon={faSearch} color="black" />
             </div>
         </div>
         <div className={styles.blogs_container}>
-            { visibleData.map(nodes => {
+            { visibleData.length > 0 && visibleData.map(nodes => {
                 return (
                     <CardBlog labelColor={myMap.get(nodes.category)} blogLabel={nodes.category} blogDestination={nodes.slug} blogImage={nodes.image.fixed} blogTitle={nodes.title} blogDesc={nodes.description} blogFooter={nodes.author + ' • ' + '5 minuta čitanja'} />
                 )
             }) }
+            { visibleData.length === 0 && <p className={styles.noresultText}>Nema rezultata za <b>{searchQuery}</b></p>}
         </div>
     </main>
     )}

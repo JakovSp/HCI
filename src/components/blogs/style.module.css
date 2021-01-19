@@ -46,6 +46,10 @@ input[type=text], select {
     font-family: montserrat-medium;
     transition: all 0.2s;
 }
+.button_control_container a:hover {
+    background-color: #B73225 !important;
+    color: white !important;
+}
 .input_container { 
     position: relative;
     flex: 1;
@@ -66,4 +70,10 @@ input[type=text], select {
 }
 .blogs_container > *:first-child {
     grid-column: span 1.5;
+}
+.noresultText {
+    text-align: center;
+    font-size: 20px;
+    grid-column: span 4;
+    margin-top: 50px;
 }
