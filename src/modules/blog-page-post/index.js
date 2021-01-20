@@ -18,7 +18,6 @@ const BlogPost = ({ pageContext }) => {
         const newId = node.content[0].value
         headings.push(newId)
         headingsId.push(formatId(newId))
-        console.log(headingsId)
         return formatId(newId)
     }
 
