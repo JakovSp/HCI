@@ -37,7 +37,7 @@
 }
 .card_image {
     object-fit: cover;
-    max-height: 200px;
+    max-height: 300px;
     transition: transform .5s ease;
     -webkit-backface-visibility: hidden; 
     backface-visibility: hidden;
