@@ -7,25 +7,51 @@ import CardNews from '../card-news'
 
 const NewsSection = () => {
 
-  const data = useStaticQuery(graphql`
-    query {
-        myImage: file(relativePath: { eq: "planina.jpg" }) {
-        childImageSharp {
-          fluid(quality: 90, maxHeight: 1920) {
-            ...GatsbyImageSharpFluid_withWebp
+  // const data = useStaticQuery(graphql`
+  //   query {
+  //       myImage: file(relativePath: { eq: "planina.jpg" }) {
+  //       childImageSharp {
+  //         fluid(quality: 90, maxHeight: 1920) {
+  //           ...GatsbyImageSharpFluid_withWebp
+  //         }
+  //       }
+  //     }
+  //   }
+  // `);
+
+  const news = useStaticQuery(graphql`
+    {
+      allContentfulNewsPreview {
+        nodes {
+          image {
+            fixed(width: 300) {
+              src
+              srcSet
+              srcSetWebp
+              srcWebp
+              width
+              height
+              base64
+              aspectRatio
+            }
           }
+          title
+          description
+          timestamp
         }
       }
     }
-  `);
+  `)
 
   return (
     <main className={styles.news_card_container}>
-      <CardNews newsImage={data.myImage.childImageSharp.fluid} newsTitle="News title" newsDesc="Some quick example text to build on the card title and make up the bulk of the card's content."/>
-      <CardNews newsImage={data.myImage.childImageSharp.fluid} newsTitle="News title" newsDesc="Some quick example text to build on the card title and make up the bulk of the card's content."/>
-      <CardNews newsImage={data.myImage.childImageSharp.fluid} newsTitle="News title" newsDesc="Some quick example text to build on the card title and make up the bulk of the card's content."/>
-      <CardNews newsImage={data.myImage.childImageSharp.fluid} newsTitle="News title" newsDesc="Some quick example text to build on the card title and make up the bulk of the card's content."/>
-      <CardNews newsImage={data.myImage.childImageSharp.fluid} newsTitle="News title" newsDesc="Some quick example text to build on the card title and make up the bulk of the card's content."/>
+      {
+        news.allContentfulNewsPreview.nodes.map( (nodes) => {
+          return (
+            <CardNews newsImage={nodes.image.fixed} newsTitle={nodes.title} newsDesc={nodes.description} newsTimestamp={nodes.timestamp}/>
+          )
+        })
+      }
     </main>
   )
   }
