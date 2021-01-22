@@ -14,14 +14,14 @@ const Map = withScriptjs(withGoogleMap(({Location},props) =>
 ))
 
 
-const MapPage = ({Location}) =>(
-      <div className={styles.map}>
+const MapPage = ({Location, mapwidth, mapheight}) =>(
+      <div >
         <Map
           isMarkerShown
           googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places"
-          loadingElement={<div style={{ width: '65vw', height: `65vh` }} />}
-          containerElement={<div style={{ width: '65vw', height: `65vh`}} />}
-          mapElement={<div style={{ width: '65vw', height: `65vh` }} />}
+          loadingElement=   {<div style={{ width: mapwidth, height: mapheight  }} />}
+          containerElement= {<div style={{ width: mapwidth, height: mapheight  }} />}
+          mapElement=       {<div style={{ width: mapwidth, height: mapheight  }} />}
           Location = {LatLng[Location]} 
         />
       </div>

@@ -1,13 +1,11 @@
-import React, {useState} from "react"
+import React from "react"
 import HeaderFooterLayout from "../layout/header-footer"
-import MapPage from "../components/Map"
-import { useGlobalState } from "../global/state"
+import LocationForm from "../modules/location-form"
 
 const DescriptionPage = () =>{
-  const [location,setLocation] = useGlobalState("location")
   return (
     <HeaderFooterLayout activeTab="Tečajevi">
-        <MapPage Location={location} />
+      <LocationForm />
     </HeaderFooterLayout> 
   )
 } 
