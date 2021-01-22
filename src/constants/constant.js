@@ -1,6 +1,6 @@
 export const navTabs = [
     {tab: 'Naslovna', to: '/'},
-    {tab: 'Tečajevi', to: '/'}, 
+    {tab: 'Tečajevi', to: '/courses'}, 
     {tab: 'Oprema', to: '/'}, 
     {tab: 'Izleti', to: '/hiking'},
     {tab: 'Blog', to: '/blog'}
