@@ -13,10 +13,7 @@
     box-shadow:         1px 1px 5px 1px #ccc;
     overflow: hidden;
     width: 100%;
-}
-.card_container:hover .card_image {
-    -webkit-transform: scale(1.03);
-    transform: scale(1.03);
+    max-height: 500px;
 }
 .inner_card_container {
     display: flex;
@@ -30,7 +27,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
-    -webkit-line-clamp: 3; /* number of lines to show */
+    margin-bottom: 0;
     -webkit-box-orient: vertical;
 }
 .card_image {

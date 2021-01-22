@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState,useEffect} from 'react'
 import styles from './style.module.css'
 import LoginImg from './../../images/block-user.svg'
 import ErrorImg from './../../images/warning.svg'
@@ -22,6 +22,26 @@ const LoginForm = () => {
     const [isGeneralError, setIsGeneralError] = useState(false);
     const [isSubmitted, setIsSubmitted] = useState(false);
     const generalErrorMessage = "E-mail adresa ili zaporka je netočna"
+
+    useEffect(() => {
+        var input = document.getElementById("loginForm");
+        input.addEventListener("keyup", function(event) {
+            var code;
+
+            if (event.key !== undefined) {
+                code = event.key;
+            } else if (event.keyIdentifier !== undefined) {
+                code = event.keyIdentifier;
+            } else if (event.keyCode !== undefined) {
+                code = event.keyCode;
+            }
+
+            if (code === 'Enter') {
+                event.preventDefault();
+                document.getElementById("loginButton").click();
+            }
+        });
+    })
 
     async function attemptSignin(email, password, remember) {
         setIsSubmitted(true)
@@ -64,7 +84,7 @@ const LoginForm = () => {
             <circle className={styles.path} cx="50" cy="50" r="20" fill="none" stroke-width="5" stroke-miterlimit="10"></circle>
             </svg>
         </div>
-        <form className={ isLoading ? styles.login_form_disable : styles.login_form}>
+        <form id="loginForm" className={ isLoading ? styles.login_form_disable : styles.login_form}>
             <div className={styles.input_container}>
                 <input style={{ borderColor: (isSubmitted) ? ((emailError === null) || (typeof(emailError) === "undefined")) ? '#004e7c' : '#FF0033' : '' }} type="email" placeholder="E-mail" onChange={e => { 
                     setEmail(e.target.value)
@@ -89,7 +109,7 @@ const LoginForm = () => {
                 </div>
                 <a href="#">Zaboravili ste lozinku?</a>
             </div>
-            <input onClick={ () => attemptSignin(email, password, remember) } type="button" value = { isLoading ? "Učitavanje..." : "Prijava" }/>
+            <input id="loginButton" onClick={ () => attemptSignin(email, password, remember) } type="button" value = { isLoading ? "Učitavanje..." : "Prijava" }/>
         </form>
         <div className={styles.reg_container}>
             <p>Novi ste korisnik?</p>

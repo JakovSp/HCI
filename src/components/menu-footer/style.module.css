@@ -1,10 +1,20 @@
 .menu_list {
+    display: flex;
+    flex-direction: column;
     list-style-type: none;
     padding: 0;
 }
-.menu_list li {
-    margin: 5px 0;
+.menu_list a {
+    margin: 3px 0;
     font-size: 13px;
+    text-decoration: none;
+    color: #CCCCCC;
+}
+.menu_list span {
+    border-bottom: 1px solid #333333;
+}
+.menu_list span:hover {
+    border-color:#CCCCCC;
 }
 .header {
     font-size: 15px;

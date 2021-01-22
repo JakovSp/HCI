@@ -4,7 +4,7 @@ import TecajeviMain from "../modules/tecajevi"
 
 const TecajeviPage = () => (
     <HeaderFooterLayout activeTab="Tečajevi">
-    <TecajeviMain />
+      <TecajeviMain />
     </HeaderFooterLayout> 
   )
 export default TecajeviPage
