@@ -1,29 +1,17 @@
 .page{
     display: flex;
     align-items: center;
-    justify-content: space-around;
-}
-
-.selector{
-    border: 2px solid black;
-}
-
-.selector ul{
-    display: flex;
     flex-direction: column;
-    list-style: none;
-}
-.selector ul li{
-    display:grid;
-    grid-template-columns: min-content auto;
-    grid-gap: 0.5em;
+    padding: 0 10vw;
+    padding-top: 10vh;
 }
 
-.selector ul span{
+.mapheader{
     display: flex;
-    width: 1em;
-    height: 1em;
-    border-radius: 50%;
-    border: 0.1em solid currentColor;
-    background: radial-gradient(currentcolor 50%, rgba(255, 0, 0, 0) 51%)
+    flex-direction: row;
+    padding-bottom: 12vh;
+}
+
+.description{
+    display: flex;
 }

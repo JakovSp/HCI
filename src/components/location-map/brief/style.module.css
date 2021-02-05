@@ -1,0 +1,26 @@
+.brief{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 100px;
+    padding-left: 50px;
+}
+.selector{
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 7vh;
+}
+.selector label{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    padding: 0 1vw;
+}
+.selector > li > input{
+    background-color: #eee;
+}
+.description{
+    display: flex;
+    width: 0;
+    min-width: 100%;
+}

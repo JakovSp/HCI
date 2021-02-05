@@ -1,15 +1,14 @@
 import React from 'react'
 import styles from "./style.module.css"
-import { withScriptjs, withGoogleMap, GoogleMap, Marker } from "react-google-maps"
+import { withScriptjs, withGoogleMap, GoogleMap, Polyline } from "react-google-maps"
 import {LatLng} from "../../constants/constant.js"
 
-const Map = withScriptjs(withGoogleMap(({Location},props) =>
+const Map = withScriptjs(withGoogleMap(({Location},props) => 
   <GoogleMap
     mapTypeId={'terrain'}
     defaultZoom={12}
     defaultCenter={{lat: Location[0], lng: Location[1]}}
   >
-    {props.isMarkerShown && <Marker position={{ lat: -34.397, lng: 150.644 }} />}
   </GoogleMap>
 ))
 
