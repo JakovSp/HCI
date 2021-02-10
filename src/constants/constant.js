@@ -22,4 +22,18 @@ export const months = [
 ]
 
 export const Locations = ['Paklenica', 'Dinara', 'Kozjak', 'Mosor', 'Biokovo', 'Velebit']
+export const Oprema = [
+    { name: 'Stap', price: "59,95" },
+    { name: 'Karabiner', price: "15" },
+    { name: 'Kreda', price: "10" },
+    { name: 'Medjuosiguranje', price: "448,90" },
+    { name: 'Pojas', price: "419,50" },
+    { name: 'Kolotura', price: "170" },
+    { name: 'Kaciga', price: "471,75" },
+    { name: 'Klin', price: "75" }
+]
 
+export const Filters = [
+    ["Vrsta" , ["Planinarenje","Obuća","Ostala oprema"]],
+    ["Brend" , ["Wild Country","Lanex","Petzl"]]
+]
