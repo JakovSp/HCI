@@ -1,0 +1,63 @@
+.cart{
+    display: flex;
+    flex-direction: column;
+    width: 45vw;
+    background-color: var(--color-tabs)
+}
+
+.inventory{
+    border: 2px solid var(--highlight-background);
+    background-color: white;
+    margin: 3vw;
+}
+.inventory li{
+    display: flex;
+    list-style: none;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+.inventory li *{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.enum{
+    display: flex;
+    flex-direction: row;
+    padding: 0 12px;
+}
+
+.side{
+    display: none;
+}
+.enum:hover + .side{
+    display: flex;
+}
+
+hr{
+    border: none;
+    height: 2px;
+    margin: 0 12px;
+    background-color: var(--highlight-background);
+    margin-bottom: 12px;
+}
+
+.sum{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 2vw;
+}
+
+.sum{
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+}
+
+.sum h2{
+    font-size: 30px;
+    font-weight: bold;
+}
