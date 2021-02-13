@@ -10,7 +10,6 @@ const ProfileNav = ({loggedIn}) => {
 
     function checkUserStatus() {
         const user = auth.currentUser()
-        console.log(user)
         if(user !== null) {
             return true
         }

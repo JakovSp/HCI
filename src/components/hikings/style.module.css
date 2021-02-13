@@ -1,7 +1,7 @@
 .container {
     display: flex;
     flex-direction: column;
-    margin: 30px 0 0 0;
+    margin: 50px 0 0 0;
     padding: 0;
 }
 .control_container {
@@ -93,12 +93,20 @@
 .button_group_active {
     cursor: pointer;
     overflow: hidden;
-    position: relative;
-    background-color: #cc463a;
-    border-color: #cc463a;
+    background-color: #B73225;
+    border: 1px #B73225 solid;
+    color: white;
 }
 .button_group_unactive {
     cursor: pointer;
     overflow: hidden;
-    position: relative;
+    background-color: white;
+    border: 1px #B73225 solid;
+    color: #B73225;
+}
+.noresultText {
+    text-align: center;
+    font-size: 20px;
+    grid-column: span 4;
+    margin-top: 50px;
 }

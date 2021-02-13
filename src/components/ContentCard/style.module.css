@@ -1,0 +1,23 @@
+.card{
+    display: flex;
+    background: var(--color-tabs);
+}
+
+.image{
+    display: flex;
+    flex: 2;
+}
+
+.rowdesc{
+    display: flex;
+    flex: 1;
+    margin: 0px;
+ }
+
+ .columndesc{
+    display: flex;
+    margin: 0px;
+    width: 0;
+    min-width: 100%;
+    justify-content: center;
+ }

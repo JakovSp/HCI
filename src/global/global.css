@@ -30,4 +30,11 @@ body {
 }
 h5 {
     margin: 0px;
+  }
+
+:root {
+    --highlight-background: #591C0B;
+    --highlight-foreground: white;
+    --color-disabled: #C2C2C2;
+    --color-tabs: #E3E3E3;
 }

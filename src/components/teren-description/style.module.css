@@ -1,0 +1,45 @@
+
+.imageDescription{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.description{
+    color: var(--highlight-background);
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: 1;
+    margin-left: 55%;
+    justify-content: space-between;
+    min-height: 28vw;
+}
+
+.text{
+    display: inline;
+    font-size: 1.2em;
+    flex-direction: min;
+    max-height: 24vw;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.text p{
+    margin: 1.2em 0;
+}
+
+.bottom{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 1vw;
+    padding-top: 1rem;
+}
+.bottom p{
+    font-size: 1.4rem;
+    margin: 0;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 800px){}

@@ -4,8 +4,8 @@ import Button from '../button'
 
 const BannerInformationBlock = () => (
     <main className={styles.container}>
-        <h1>Postanite član Planinarskog kluba Rockreacija već danas i uživajte u brojnim pogodnostima.</h1>
-        <Button style={styles.information_block_button} text="Učlani se"/>
+        <h1>Odlučili ste se za neki planinarski pothvat? Iznajmite opremu kod nas pri dostupnim cijenama!</h1>
+        <Button style={styles.information_block_button} text="Najam opreme"/>
     </main>
 )
 

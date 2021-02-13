@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState,useEffect} from 'react'
 import styles from './style.module.css'
 import RegistrationImg from './../../images/add-user.svg'
 import ErrorImg from './../../images/warning.svg'
@@ -35,6 +35,26 @@ const RegistrationForm = () => {
     const [confirmPasswordError, setConfirmPasswordError] = useState();
 
     const generalErrorMessage = "Korisnik sa tom e-mail adresom već postoji."
+
+    useEffect(() => {
+        var input = document.getElementById("registrationForm");
+        input.addEventListener("keyup", function(event) {
+            var code;
+
+            if (event.key !== undefined) {
+                code = event.key;
+            } else if (event.keyIdentifier !== undefined) {
+                code = event.keyIdentifier;
+            } else if (event.keyCode !== undefined) {
+                code = event.keyCode;
+            }
+
+            if (code === 'Enter') {
+                event.preventDefault();
+                document.getElementById("registrationButton").click();
+            }
+        });
+    })
 
     async function attemptSignup(firstname, lastname, username, email, password, confirmPassword) {
         setIsSubmitted(true)
@@ -82,7 +102,7 @@ const RegistrationForm = () => {
             <circle className={styles.path} cx="50" cy="50" r="20" fill="none" stroke-width="5" stroke-miterlimit="10"></circle>
             </svg>
         </div>
-        <form className={ isLoading ? styles.registration_form_disable : styles.registration_form}>
+        <form id="registrationForm" className={ isLoading ? styles.registration_form_disable : styles.registration_form}>
             <div className={styles.input_container}>
                 <input style={{ borderColor: (isSubmitted) ? ((textErrorName === null) || (typeof(textErrorName) === "undefined")) ? '#004e7c' : '#FF0033' : '' }} type="text" placeholder="Ime" onChange={e => {
                     setFirstname(e.target.value)
@@ -133,7 +153,7 @@ const RegistrationForm = () => {
                 }}/>
                 <p>{ (isSubmitted) ? confirmPasswordError : null}</p>
             </div>
-            <input onClick={ () => attemptSignup(firstName, lastName, username, email, password, confirmPassword) } type="button" value = { isLoading ? "Učitavanje..." : "Registracija" }/>
+            <input id="registrationButton" onClick={ () => attemptSignup(firstName, lastName, username, email, password, confirmPassword) } type="button" value = { isLoading ? "Učitavanje..." : "Registracija" }/>
         </form>
         <div className={styles.reg_container}>
             <p>Postojeći ste korisnik?</p>

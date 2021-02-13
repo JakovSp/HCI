@@ -20,6 +20,7 @@
     transition: 0.2s;
     max-width: 150px;
     text-align: center;
+    cursor: pointer;
 }
 .information_block_button:hover{
   color: #f6f7f9;
