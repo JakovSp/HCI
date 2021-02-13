@@ -4,6 +4,4 @@
 .logo img{
   display: flex;
   flex-flow: column;
-  width:  30%;
-  height: 30%;
 }
