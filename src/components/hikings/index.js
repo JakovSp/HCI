@@ -1,13 +1,12 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import styles from './style.module.css'
 import ButtonGroup from '../button-group'
 import CardHiking from '../card-hiking'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRight, faArrowLeft } from '@fortawesome/free-solid-svg-icons'
 import { useStaticQuery, graphql } from "gatsby"
-import { months } from '../../constants/constant'
+import { months,hikingLocations } from '../../constants/constant'
 import CardMonth from '../card-month'
-import Ripple from '../ripple/ripple'
 
 export function getCurrentMonth(){
 
@@ -29,7 +28,14 @@ const Hikings = ({}) => {
         setNewView(newView);
     };
 
-    
+    const [monthLocations, setMonthLocations] = useState();
+    const toggleNumberOfLocations = (newMonthLocations) => {
+        setMonthLocations(newMonthLocations);
+    };
+
+    useEffect(() => {
+        toggleNumberOfLocations(currentMonth.noOfLocations)
+    }, [currentMonth])
 
     const data = useStaticQuery(graphql`
         query {
@@ -48,41 +54,34 @@ const Hikings = ({}) => {
         <div className={styles.control_container}>
             <a style={{ visibility: (currentView == "month") ? 'visible' : 'hidden'}} onClick={ () => toggleMonth(getCurrentMonth()) } className={(currentMonth.monthNumber == getCurrentMonth()) ? styles.current_month_button_disable : styles.current_month_button_enable}>
                 Trenutni mjesec
-                <Ripple />
             </a>
             <div style={{ visibility: (currentView == "month") ? 'visible' : 'hidden'}} className={styles.inner_control_container}>
-                <a onClick={ () => toggleMonth(currentMonth.monthNumber-1) } className={(currentMonth.monthNumber == 1) ? styles.arrow_disable : styles.arrow_enable}><FontAwesomeIcon icon={faArrowLeft} color="black" /></a>
+                <a onClick={ () => toggleMonth(currentMonth.monthNumber-1)} className={(currentMonth.monthNumber == 1) ? styles.arrow_disable : styles.arrow_enable}><FontAwesomeIcon icon={faArrowLeft} color="black" /></a>
                 <a className={ styles.month_title }>{ currentMonth.monthName } 2021</a>
                 <a onClick={ () => toggleMonth(currentMonth.monthNumber+1) } className={(currentMonth.monthNumber == 12) ? styles.arrow_disable : styles.arrow_enable}><FontAwesomeIcon icon={faArrowRight} color="black" /></a>
             </div>
             <ButtonGroup>
                 <a className={(currentView == "month") ? styles.button_group_active : styles.button_group_unactive} onClick={ () => toggleView("month") }>
                     Mjesec
-                    <Ripple />
                 </a>
                 <a className={(currentView == "year") ? styles.button_group_active : styles.button_group_unactive} onClick={ () => toggleView("year") }>
                     Godina
-                    <Ripple />
                 </a>
             </ButtonGroup>
         </div>
         <div>
             <div className={styles.hikings_container_month} style={{ display: (currentView == "month") ? 'grid' : 'none'}}>
-                <CardHiking hikingImage={data.myImage.childImageSharp.fluid} hikingTitle="News title" hikingDesc="Some quick example text to build on the card title and make up the bulk of the card's content." hikingFooter="bla"/
-                ><CardHiking hikingImage={data.myImage.childImageSharp.fluid} hikingTitle="News title" hikingDesc="Some quick example text to build on the card title and make up the bulk of the card's content." hikingFooter="bla"/
-                ><CardHiking hikingImage={data.myImage.childImageSharp.fluid} hikingTitle="News title" hikingDesc="Some quick example text to build on the card title and make up the bulk of the card's content." hikingFooter="bla"/
-                ><CardHiking hikingImage={data.myImage.childImageSharp.fluid} hikingTitle="News title" hikingDesc="Some quick example text to build on the card title and make up the bulk of the card's content." hikingFooter="bla"/
-                ><CardHiking hikingImage={data.myImage.childImageSharp.fluid} hikingTitle="News title" hikingDesc="Some quick example text to build on the card title and make up the bulk of the card's content." hikingFooter="bla"/
-                ><CardHiking hikingImage={data.myImage.childImageSharp.fluid} hikingTitle="News title" hikingDesc="Some quick example text to build on the card title and make up the bulk of the card's content." hikingFooter="bla"/
-                ><CardHiking hikingImage={data.myImage.childImageSharp.fluid} hikingTitle="News title" hikingDesc="Some quick example text to build on the card title and make up the bulk of the card's content." hikingFooter="bla"/
-                ><CardHiking hikingImage={data.myImage.childImageSharp.fluid} hikingTitle="News title" hikingDesc="Some quick example text to build on the card title and make up the bulk of the card's content." hikingFooter="bla"/
-                ><CardHiking hikingImage={data.myImage.childImageSharp.fluid} hikingTitle="News title" hikingDesc="Some quick example text to build on the card title and make up the bulk of the card's content." hikingFooter="bla"/
-                >
-
+                {
+                    monthLocations !== 0 ? 
+                    hikingLocations.slice(0, monthLocations).map(({title, desc, guide}) => (
+                        <CardHiking hikingImage={data.myImage.childImageSharp.fluid} hikingTitle={title} hikingDesc={desc} hikingFooter={guide}/>
+                    )
+                ) : <p className={styles.noresultText}>Nema izleta za ovaj mjesec.</p>
+                }
             </div>
             <div className={styles.hikings_container_year} style={{ display: (currentView == "year") ? 'grid' : 'none'}}>
-                {months.map(({monthNumber, monthName, monthColor}) => (
-                    <CardMonth onClickEvent={ () => { toggleView("month"); toggleMonth(monthNumber) }}  monthName={monthName} monthColor={monthColor}/>)
+                {months.map(({monthNumber, monthName, monthColor, noOfLocations}) => (
+                    <CardMonth onClickEvent={ () => { toggleView("month"); toggleMonth(monthNumber) }} monthName={monthName} monthColor={monthColor} numberOfMonths={noOfLocations}/>)
                 )}
             </div>
         </div>
