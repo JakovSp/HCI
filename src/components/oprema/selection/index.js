@@ -4,20 +4,29 @@ import ContentCard from "../../ContentCard"
 import {Oprema} from "../../../constants/constant"
 import ItemsImages from "../../Images/Oprema"
 
-const SelectionForm = ()=>(
+const SelectionForm = ({Selection, setSelection})=>(
     <div className={styles.selection}>
-        {Oprema.map(el => <div className={styles.element}>
-            <ContentCard 
-                Image={() => <ItemsImages Item={el.name}/>} 
-                Direction={"column"} 
-                Text={
+        {Object.keys(Oprema).map(key => 
+            <div 
+                onClick={() => {
+                    var Cart = new Array 
+                    Cart = Selection
+                    Cart.push(key)
+                    setSelection(Cart)
+                    alert(Selection)
+                } } 
+                className={styles.element}>
+                <ContentCard
+                    Image={() => <ItemsImages Item={key}/>} 
+                    Direction={"column"} 
+                    Text={
                     <div className={styles.pricetag} >
-                        <h4>{el.name}</h4>
-                        <p>{el.price} HRK</p> 
+                        <h4>{Oprema[key]["name"]}</h4>
+                        <p>{Oprema[key]["price"]} HRK</p> 
                     </div>
                 } /> 
             </div>
-            )}
+        )}
     </div>
 )
 

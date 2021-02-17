@@ -2,7 +2,7 @@ import React from 'react'
 import styles from "./style.module.css"
 import {Filters} from "../../../constants/constant"
 
-const FiltersForm = ()=>(
+const FiltersForm = ()=>( 
     <div className={styles.page}>
         {Filters.map(FilterType => 
             <div>
