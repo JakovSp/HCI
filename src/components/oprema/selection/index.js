@@ -3,17 +3,21 @@ import styles from "./style.module.css"
 import ContentCard from "../../ContentCard"
 import {Oprema} from "../../../constants/constant"
 import ItemsImages from "../../Images/Oprema"
+import {useGlobalState} from "../../../global/state"
+import Button from "../../button"
 
-const SelectionForm = ({Selection, setSelection})=>(
+
+const SelectionForm = ()=>{
+    const [selection, setSelection] = useGlobalState("Cart")
+    return(
     <div className={styles.selection}>
         {Object.keys(Oprema).map(key => 
             <div 
                 onClick={() => {
                     var Cart = new Array 
-                    Cart = Selection
+                    Cart = selection
                     Cart.push(key)
                     setSelection(Cart)
-                    alert(Selection)
                 } } 
                 className={styles.element}>
                 <ContentCard
@@ -28,6 +32,6 @@ const SelectionForm = ({Selection, setSelection})=>(
             </div>
         )}
     </div>
-)
+)}
 
 export default SelectionForm
