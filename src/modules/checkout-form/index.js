@@ -13,7 +13,7 @@ const CheckoutFrom = ()=>(
         <div  className={styles.bottom}>
             <label className={styles.container} >Koristi adresu dostave za plaćanje
                 <input type="checkbox" />
-                <span className={styles.checkmark} ></span>
+                <span className={styles.checkbox} ></span>
             </label>
             <CustomButton Text={"Obračun"} />
         </div>

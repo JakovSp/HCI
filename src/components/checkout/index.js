@@ -7,7 +7,7 @@ import styles from './style.module.css'
 const Cart = () =>{
     const [list, setList] = useGlobalState("Cart")
     return(
-    <Link to={'/checkout'}> 
+        <Link to={'/checkout'}> 
         <div className={styles.cart}>
             <div className={styles.size}>{list.length}</div>
             <img src={cart} height="45px" /> 

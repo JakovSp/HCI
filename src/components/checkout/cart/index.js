@@ -19,7 +19,14 @@ const CartForm = ()=>{
                 </nav>
                 <p>
                     <p style={{padding: "0 12px"}}>{Oprema[el]["price"]} HRK</p>
-                    <MiscIcons id={"x"} Item={"x"} Width={"12px"} />
+                    <div onClick={ () => {
+                                var ar = new Array
+                                ar = list
+                                ar.splice(ar.findIndex(element => element === el), 1);
+                                setList(ar)
+                            }} >
+                        <MiscIcons id={"x"} Item={"x"} Width={"12px"} />
+                    </div>
                 </p>
             </li>
             )}
