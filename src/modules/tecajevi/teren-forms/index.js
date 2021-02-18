@@ -6,7 +6,7 @@ import TerenHeader from "../../../components/teren-header"
 const TerenForm = ({selected, setSelected}) =>{
     return (
     <div className={styles.page}>
-        <TerenHeader setSelected={setSelected} />
+        <TerenHeader selected={selected} setSelected={setSelected} />
         <TerenDescription activeLocation={selected}/>
     </div>
 )}

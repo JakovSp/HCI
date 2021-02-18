@@ -9,9 +9,5 @@
 .mapheader{
     display: flex;
     flex-direction: row;
-    padding-bottom: 12vh;
-}
-
-.description{
-    display: flex;
+    margin-bottom: 12vh;
 }

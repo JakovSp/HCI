@@ -13,7 +13,7 @@ const LocationForm = () =>{
             <MapPage Location={location} mapwidth={"55vw"} mapheight={"65vh"} />
             <BriefForm Location={location} />
         </div>
-        <Description className={styles.description} />
+        {Description[location]}
     </div>
    
 )}

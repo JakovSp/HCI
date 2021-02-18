@@ -1,5 +1,4 @@
 import React from "react"
-import "leaflet/dist/leaflet.css"
 import HeaderFooterLayout from "../layout/header-footer"
 import HomePageBanner from "../modules/home-page-banner"
 import HomePageCourses from "../modules/home-page-courses"
