@@ -1,31 +1,69 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styles from "./style.module.css"
-import MiscIcons from "../../Images/misc/index"
-import {useGlobalState} from "../../../global/state"
 import {Oprema} from "../../../constants/constant"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTimes, faPlus, faMinus } from '@fortawesome/free-solid-svg-icons'
+
+function Discard(item){
+    let ar = new Array
+    let index = -1
+    ar = JSON.parse(localStorage.getItem("Cart"))
+
+    if( (index = ar.findIndex(element => element[0] === item[0])) != -1 ){
+        ar.splice(ar.findIndex(element => element[0] === item[0]), 1);
+    }
+    localStorage.setItem("Cart", JSON.stringify(ar))
+}
+
+function ChangeAmnt(item, step){
+    let ar = new Array
+    let index = -1
+    ar = JSON.parse(localStorage.getItem("Cart"))
+
+    if( (index = ar.findIndex(element => element[0] === item[0])) === -1 ){
+        console.error(item+" not found")
+        return
+    }
+    if( ar[index][1] === 1 && step === -1){
+        Discard(item)
+        return
+    }
+    ar[index][1] = ar[index][1] + step
+    localStorage.setItem("Cart", JSON.stringify(ar))
+}
+
+function Sum(){
+    let ar = new Array
+    ar = JSON.parse(localStorage.getItem("Cart"))
+    let sum = 0;
+    for (var i = ar.length; i--;) {
+        sum += ar[i][1] * parseFloat(Oprema[ar[i][0]]["price"])
+    }
+    return sum
+}
 
 const CartForm = ()=>{
-    const [list, setList] = useGlobalState("Cart")
+    const [hide,setHide] = useState(true)
+    let list = JSON.parse(localStorage.getItem("Cart"))
     return (
     <div className={styles.cart}>
         <div className={styles.inventory}>
             {list.map( el =>
             <li>
-                <nav>
-                    <MiscIcons id={"minus"} className={styles.side} Item={"minus"} Width={"12px"} />
-                    <p className={styles.enum} >{"1"}</p>
-                    <MiscIcons id={"plus"} className={styles.side} Item={"plus"} Width={"12px"} />
-                    <p style={{paddingLeft: "12px"}}>{Oprema[el]["name"]}</p>
+                <nav className={styles.enum} onMouseLeave={() => setHide(true)} onMouseOver={() => setHide(false)} >
+                    <section className={styles.side}  style={{ visibility: hide ? "hidden" : ""}} onClick={() => ChangeAmnt(el, -1)} >
+                        <FontAwesomeIcon height="12px" icon={faMinus} color="var(--color-disabled)" />
+                    </section>
+                    <p>{el[1]}</p>
+                    <section className={styles.side}  style={{ visibility: hide ? "hidden" : ""}} onClick={() => ChangeAmnt(el, 1)} >
+                        <FontAwesomeIcon height="12px" icon={faPlus} color="var(--color-disabled)" />
+                    </section>
+                    <p >{Oprema[el[0]]["name"]}</p>
                 </nav>
                 <p>
-                    <p style={{padding: "0 12px"}}>{Oprema[el]["price"]} HRK</p>
-                    <div onClick={ () => {
-                                var ar = new Array
-                                ar = list
-                                ar.splice(ar.findIndex(element => element === el), 1);
-                                setList(ar)
-                            }} >
-                        <MiscIcons id={"x"} Item={"x"} Width={"12px"} />
+                    <p style={{padding: "0 6px"}}>{Oprema[el[0]]["price"]} HRK</p>
+                    <div onClick={() => Discard(el)} >
+                        <FontAwesomeIcon icon={faTimes} color="var(--highlight-background)" />
                     </div>
                 </p>
             </li>
@@ -34,7 +72,7 @@ const CartForm = ()=>{
         <hr />
         <div className={styles.sum}>
             <p>Ukupno:</p>
-            <h2>{"299 HRK"}</h2>
+            <h2>{Sum()} HRK</h2>
         </div>
     </div>
 )}

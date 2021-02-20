@@ -2,7 +2,6 @@ import React from 'react'
 import styles from "./style.module.css"
 import amex from "../../../images/Oprema/payment/amex.svg"
 import discover from "../../../images/Oprema/payment/discover.svg"
-import maestro from "../../../images/Oprema/payment/maestro.svg"
 import mastercard from "../../../images/Oprema/payment/mastercard.svg"
 import visa from "../../../images/Oprema/payment/visa.svg"
 import paypal from "../../../images/Oprema/payment/paypal.svg"

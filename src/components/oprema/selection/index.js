@@ -3,7 +3,6 @@ import styles from "./style.module.css"
 import ContentCard from "../../ContentCard"
 import {Oprema} from "../../../constants/constant"
 import ItemsImages from "../../Images/Oprema"
-import {useGlobalState} from "../../../global/state"
 
 function Filter(list, filters)
 {
@@ -21,18 +20,24 @@ function Filter(list, filters)
     return Object.keys(items)
 }
 
+function AddItem(item)
+{
+    let ar = new Array 
+    let index = -1
+    ar = JSON.parse(localStorage.getItem("Cart"))
+    if( (index = ar.findIndex(element => element[0] === item)) != -1 )
+    { ar[index][1] += 1 }
+    else{ ar.push([item, 1]) }
+    localStorage.setItem("Cart",JSON.stringify(ar))
+}
+
 const SelectionForm = ({filters, setFilters})=>{
-    const [selection, setSelection] = useGlobalState("Cart")
+ 
     return(
     <div className={styles.selection}>
         {Object.keys(Oprema).map(key => 
             <div 
-                onClick={() => {
-                    var Cart = new Array 
-                    Cart = selection
-                    Cart.push(key)
-                    setSelection(Cart)
-                } } 
+                onClick={() => AddItem(key) } 
                 className={styles.element}>
                 <ContentCard
                     Image={() => <ItemsImages Item={key}/>} 

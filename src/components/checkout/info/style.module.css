@@ -1,53 +1,55 @@
 .info{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    width: 40vw;
-    justify-content: space-between;
-    background-color: var(--color-tabs);
-    justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 40vw;
+  justify-content: space-between;
+  background-color: var(--color-tabs);
+  justify-content: center;
 }
 
 .inputfield{
-    display: flex;
-    max-width: 80%;
-    width: 100%;
+  display: flex;
+  max-width: 80%;
+  width: 100%;
 }
 
 .info:nth-child(-n+3){
-    display: flex;
+  display: flex;
 }
 
 input{
-    display: flex;
-    font-size: 15px;
-    height: 45px;
-    border-radius: 0;
-    border-color: var(--highlight-background);
-    border-width:  2px;
-    margin: 10px 0;
+  display: flex;
+  font-size: 15px;
+  height: 45px;
+  border-radius: 0;
+  border-color: var(--highlight-background);
+  border-width:  2px;
+  margin: 10px 0;
+  font-family: montserrat;
+  text-indent: 2px;
 }
 
 ::placeholder{
-    color: var(--color-disabled);
-    text-indent: 2px;
-    font-family: montserrat;
+  color: var(--color-disabled);
+  text-indent: 2px;
+  font-family: montserrat;
 }
 
 .creditcard{
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
 .creditcard > img{
-    display: flex;
-    height: 50px;
-    padding: 0 20px;
+  display: flex;
+  height: 50px;
+  padding: 0 20px;
 }
 
 .payment{
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .container {
