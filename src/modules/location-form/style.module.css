@@ -1,13 +1,22 @@
 .page{
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     flex-direction: column;
     padding: 0 10vw;
-    padding-top: 10vh;
+    padding-top: 4vh;
+}
+
+.page > h2{
+    margin-left: -4vw;
 }
 
 .mapheader{
     display: flex;
     flex-direction: row;
-    margin-bottom: 12vh;
+    margin-bottom: 5vh;
+}
+
+hr{
+    width: 100%;
+    background-color: var(--highlight-background);
 }

@@ -1,6 +1,5 @@
 .brief{
     display: flex;
-    align-items: center;
     flex-direction: column;
     padding-top: 5vh;
     padding-left: 2vw;

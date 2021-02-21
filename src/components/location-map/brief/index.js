@@ -5,7 +5,7 @@ import Brief from "./description"
 const levels = ["Početnički", "Umjereno", "Napredno"]
 
 const BriefForm = ({Location}) =>{ 
-    const [radio, setRadio] = useState(0)
+    const [radio, setRadio] = useState(-1)
     return (
     <div className={styles.brief}>
         <div className={styles.selector} >
