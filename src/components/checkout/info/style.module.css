@@ -1,9 +1,13 @@
+.page{
+  display: flex;
+  flex-direction: column;
+}
+
 .info{
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  width: 40vw;
-  justify-content: space-between;
+  width: 46vw;
   background-color: var(--color-tabs);
   justify-content: center;
 }
@@ -18,7 +22,7 @@
   display: flex;
 }
 
-input{
+.info input{
   display: flex;
   font-size: 15px;
   height: 45px;
@@ -36,20 +40,19 @@ input{
   font-family: montserrat;
 }
 
+.payment{
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0;
+}
 .creditcard{
   display: flex;
   flex-direction: row;
 }
-
 .creditcard > img{
   display: flex;
-  height: 50px;
-  padding: 0 20px;
-}
-
-.payment{
-  display: flex;
-  flex-direction: column;
+  height: 35px;
+  padding: 0 12px;
 }
 
 .container {
@@ -63,7 +66,7 @@ input{
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    align-content: center;
+    justify-content: center;
   }
   
   /* Hide the browser's default radio button */

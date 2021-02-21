@@ -24,17 +24,17 @@ export const months = [
 export const Locations = ['Paklenica', 'Dinara', 'Kozjak', 'Mosor', 'Biokovo', 'Velebit']
 
 export const Filters = [
-    ["vrsta", ["Planinarenje","Obuća","Ostala oprema"]],
-    ["brend", ["Wild Country","Lanex","Petzl"]]
+    ["Vrsta", ["Planinarenje","Obuća","Ostala oprema"]],
+    ["Brend", ["Wild Country","Lanex","Petzl"]]
 ]
 
 export const Oprema = {
-  'Stap'            : { name: 'Štap',             price: "59.95" , vrsta: "Ostala oprema", brend: ""},
-  'Karabiner'       : { name: 'Karabiner',        price: "15", vrsta: "Planinarenje", brend: "Petzl"},
-  'Kreda'           : { name: 'Kreda',            price: "10", vrsta: "Ostala oprema", brend: "" },
-  'Medjuosiguranje' : { name: 'Međuosiguranje',  price: "448.90", vrsta: "Planinarenje", brend: "Wild Country" },
-  'Pojas'           : { name: 'Pojas',            price: "419.50", vrsta: "Obuća", brend: "Wild Country" },
-  'Kolotura'        : { name: 'Kolotura',         price: "170", vrsta: "Planinarenje", brend: "Lanex"},
-  'Kaciga'          : { name: 'Kaciga',           price: "471.75", vrsta: "Obuća", brend: "Wild Country"},
-  'Klin'            : { name: 'Klin',             price: "75", vrsta: "Planinarenje", brend: ""}
+  'Stap'            : { name: 'Štapovi za hodanje',     price: "59.95" , vrsta: "Ostala oprema", brend: ""},
+  'Karabiner'       : { name: 'Karabiner sa maticom',   price: "15", vrsta: "Planinarenje", brend: "Petzl"},
+  'Kreda'           : { name: 'Kreda',                  price: "10", vrsta: "Ostala oprema", brend: "" },
+  'Medjuosiguranje' : { name: 'Međuosiguranje',         price: "448.90", vrsta: "Planinarenje", brend: "Wild Country" },
+  'Pojas'           : { name: 'Pojas',                  price: "419.50", vrsta: "Obuća", brend: "Wild Country" },
+  'Kolotura'        : { name: 'Kolotura',               price: "170", vrsta: "Planinarenje", brend: "Lanex"},
+  'Kaciga'          : { name: 'Kaciga',                 price: "471.75", vrsta: "Obuća", brend: "Wild Country"},
+  'Klin'            : { name: 'Klin',                   price: "75", vrsta: "Planinarenje", brend: ""}
 }

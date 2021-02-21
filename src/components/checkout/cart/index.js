@@ -3,6 +3,8 @@ import styles from "./style.module.css"
 import {Oprema} from "../../../constants/constant"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTimes, faPlus, faMinus } from '@fortawesome/free-solid-svg-icons'
+import CustomButton from "../../CustomButton"
+import Button from "../../button"
 
 function Discard(item){
     let ar = new Array
@@ -46,35 +48,40 @@ const CartForm = ()=>{
     const [hide,setHide] = useState(true)
     let list = JSON.parse(localStorage.getItem("Cart"))
     return (
-    <div className={styles.cart}>
-        <div className={styles.inventory}>
-            {list.map( el =>
-            <li>
-                <nav className={styles.enum} onMouseLeave={() => setHide(true)} onMouseOver={() => setHide(false)} >
-                    <section className={styles.side}  style={{ visibility: hide ? "hidden" : ""}} onClick={() => ChangeAmnt(el, -1)} >
-                        <FontAwesomeIcon height="12px" icon={faMinus} color="var(--color-disabled)" />
-                    </section>
-                    <p>{el[1]}</p>
-                    <section className={styles.side}  style={{ visibility: hide ? "hidden" : ""}} onClick={() => ChangeAmnt(el, 1)} >
-                        <FontAwesomeIcon height="12px" icon={faPlus} color="var(--color-disabled)" />
-                    </section>
-                    <p >{Oprema[el[0]]["name"]}</p>
-                </nav>
-                <p>
-                    <p style={{padding: "0 6px"}}>{Oprema[el[0]]["price"]} HRK</p>
-                    <div onClick={() => Discard(el)} >
-                        <FontAwesomeIcon icon={faTimes} color="var(--highlight-background)" />
-                    </div>
-                </p>
-            </li>
-            )}
+    <div className={styles.page}>
+        <div className={styles.cart}>
+            <h2>Košarica</h2>
+            <div className={styles.inventory}>
+                {list.map( el =>
+                <li>
+                    <nav className={styles.enum} onMouseLeave={() => setHide(true)} onMouseOver={() => setHide(false)} >
+                        <section className={styles.side}  style={{ visibility: hide ? "hidden" : ""}} onClick={() => ChangeAmnt(el, -1)} >
+                            <FontAwesomeIcon height="12px" icon={faMinus} color="var(--color-disabled)" />
+                        </section>
+                        <p>{el[1]}</p>
+                        <section className={styles.side}  style={{ visibility: hide ? "hidden" : ""}} onClick={() => ChangeAmnt(el, 1)} >
+                            <FontAwesomeIcon height="12px" icon={faPlus} color="var(--color-disabled)" />
+                        </section>
+                        <p >{Oprema[el[0]]["name"]}</p>
+                    </nav>
+                    <p>
+                        <p style={{padding: "0 6px"}}>{Oprema[el[0]]["price"]} HRK</p>
+                        <div onClick={() => Discard(el)} >
+                            <FontAwesomeIcon icon={faTimes} color="var(--highlight-background)" />
+                        </div>
+                    </p>
+                </li>
+                )}
+            </div>
+            <hr />
+            <div className={styles.sum}>
+                <h3>Ukupno:</h3>
+                <h3>{Sum()} HRK</h3>
+            </div>
         </div>
-        <hr />
-        <div className={styles.sum}>
-            <p>Ukupno:</p>
-            <h2>{Sum()} HRK</h2>
-        </div>
+        <div style={{ marginTop: "10vh"}} ><Button text={"Obračun"} style={styles.information_block_button} /></div>
     </div>
+
 )}
 
 export default CartForm

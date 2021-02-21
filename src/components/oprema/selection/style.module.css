@@ -2,12 +2,15 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    width: 78%;
 }
 
 .element{
     display: flex;
     margin: 2vh 2vw;
     cursor: pointer;
+    max-height: 250px;
+
 }
 
 .pricetag{

@@ -1,24 +1,8 @@
-import React,{useState} from 'react'
+import React,{useState, useEffect} from 'react'
 import styles from "./style.module.css"
 import ContentCard from "../../ContentCard"
 import {Oprema} from "../../../constants/constant"
 import ItemsImages from "../../Images/Oprema"
-
-function Filter(list, filters)
-{
-    if(filters.length == 0)
-    { 
-        alert("no filter")
-        return Object.keys(list)}
-    else{
-        var items = new Array
-        items = list
-        items = items.filter((el) => !!el.for.find((e) => filters.includes(e.vrsta)))
-        alert(filters)
-
-    }
-    return Object.keys(items)
-}
 
 function AddItem(item)
 {
@@ -31,21 +15,21 @@ function AddItem(item)
     localStorage.setItem("Cart",JSON.stringify(ar))
 }
 
-const SelectionForm = ({filters, setFilters})=>{
- 
+const SelectionForm = ({list})=>{
+
     return(
     <div className={styles.selection}>
-        {Object.keys(Oprema).map(key => 
+        {list.map(item => 
             <div 
-                onClick={() => AddItem(key) } 
+                onClick={() => AddItem(item) } 
                 className={styles.element}>
                 <ContentCard
-                    Image={() => <ItemsImages Item={key}/>} 
+                    Image={() => <ItemsImages Item={item}/>} 
                     Direction={"column"} 
                     Text={
                     <div className={styles.pricetag} >
-                        <h4>{Oprema[key]["name"]}</h4>
-                        <p>{Oprema[key]["price"]} HRK</p> 
+                        <h4>{Oprema[item]["name"]}</h4>
+                        <p>{Oprema[item]["price"]} HRK</p> 
                     </div>
                 } /> 
             </div>

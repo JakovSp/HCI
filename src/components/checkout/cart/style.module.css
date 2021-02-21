@@ -1,16 +1,32 @@
+.page{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}  
+
 .cart{
     display: flex;
     flex-direction: column;
-    width: 45vw;
-    background-color: var(--color-tabs)
+    width: 46vw;
+    background-color: var(--color-tabs);
+    align-content: center;
+    height: 75%;
+}
+
+h2{
+    display: flex;
+    justify-content: center;
 }
 
 .inventory{
     border: 2px solid var(--highlight-background);
     background-color: white;
-    height: 45vh;
+    max-height: 45vh;
     margin: 3vw;
+    margin-top: 10px;
     overflow: scroll;
+    overflow-x: auto;
+    overflow-y: auto; 
 }
 .inventory li p{
     padding: 0;
@@ -59,10 +75,35 @@ hr{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 0 2vw;
+    padding: 0 4vw;
+    align-content: center;
 }
-
 .sum h2{
     font-size: 30px;
     font-weight: bold;
+}
+
+.information_block_button {
+    padding: 20px 100px;
+    background-color: #a96e5a;
+    border-color: #a96e5a;
+    color: #f6f7f9;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.2s;
+    max-width: 150px;
+    text-align: center;
+    cursor: pointer;
+}
+.information_block_button:hover{
+  color: #f6f7f9;
+  background-color: #9e583c;
+  border-color: #9e583c;
+}
+.information_block_button:active, .information_block_button:focus {
+  color: #f6f7f9;
+  background-color: #9e583c;
+  border-color: #9e583c;
+  box-shadow: 0 0 0 0.2rem #b97f67;
 }

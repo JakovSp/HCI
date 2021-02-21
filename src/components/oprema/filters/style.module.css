@@ -1,12 +1,30 @@
 .page{
     display: flex;
     flex-direction: column;
+    padding-left: 3vw;
+}
+
+input{
+  display: flex;
+  font-size: 13px;
+  height: 25px;
+  border-radius: 0;
+  border-color: var(--highlight-background);
+  border-width:  1.5px;
+  margin: 5px 0;
+  font-family: montserrat;
+  text-indent: 2px;
+}
+
+.filterblock > p{
+  text-decoration: none;
+  font-size: 15px;
+  margin-left: -5px;
 }
 
 hr{
   border: none;
-  height: 2px;
-  margin: 0 12px;
+  height: 1px;
   background-color: var(--highlight-background);
   margin-bottom: 12px;
 }
@@ -14,14 +32,15 @@ hr{
 .container {
   display: block;
   position: relative;
-  padding-left: 35px;
+  padding-left: 2.2vw;
   margin-bottom: 12px;
   cursor: pointer;
-  font-size: 22px;
+  font-size: 15px;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  justify-content: center;
 }
 
 /* Hide the browser's default checkbox */
@@ -38,8 +57,8 @@ hr{
   position: absolute;
   top: 0;
   left: 0;
-  height: 25px;
-  width: 25px;
+  height: 17px;
+  width: 17px;
   border: solid 1px;
   border-color: var(--highlight-background);
   background-color: #eee;
@@ -64,9 +83,9 @@ hr{
 
 /* Style the checkmark/indicator */
 .container .checkmark:after {
-  top: 3px;
-  left: 3px;
-  width: 19px;
-  height: 19px;
+  top: 2px;
+  left: 2px;
+  width: 13px;
+  height: 13px;
   background-color: var(--highlight-background);
 }

@@ -2,15 +2,15 @@ import React,{useState} from 'react'
 import FiltersForm from "../../components/oprema/filters"
 import SelectionForm from "../../components/oprema/selection"
 import styles from "./style.module.css"
+import {Oprema} from "../../constants/constant"
 
 
 const OpremaForm = ()=>{
-    const [filters, setFilters] = useState([])
-
+    const [list, setList] = useState(Object.keys(Oprema))
     return (
     <div className={styles.page}>
-        <FiltersForm filters={filters} setFilters={setFilters} />
-        <SelectionForm filters={filters} />
+        <FiltersForm list={list} setList={setList} />
+        <SelectionForm list={list} />
     </div>
 )}
 

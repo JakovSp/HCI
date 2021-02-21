@@ -63,7 +63,7 @@ const ItemsImages = ({Item}) => {
     }
   }`)
  return (
-      <div style={{width: "15vw", objectFit: "cover"}}>
+      <div style={{width: "180px", objectFit: "cover"}}>
         <Img fluid={data[Item].childImageSharp.fluid} />
       </div>
   )
