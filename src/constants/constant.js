@@ -23,7 +23,6 @@ export const months = [
 
 export const Locations = ['Paklenica', 'Dinara', 'Kozjak', 'Mosor', 'Biokovo', 'Velebit']
 
-<<<<<<< HEAD
 export const hikingLocations = [
     {title: 'Žumberačko gorje', desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Morbi tincidunt augue interdum velit euismod in.', date: '01', guide: 'Ive Vasiljević'},
     {title: 'Sjeverni velebit', desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Morbi tincidunt augue interdum velit euismod in.', date: '02', guide: 'Jakov Spahija'},
@@ -36,7 +35,6 @@ export const hikingLocations = [
     {title: 'Kilimanjaro treking 2021', desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Morbi tincidunt augue interdum velit euismod in.', date: '28', guide: 'Ive Vasiljević'},
     {title: 'Dinara – Sinjal', desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Morbi tincidunt augue interdum velit euismod in.', date: '30', guide: 'Jakov Spahija'},
 ]
-=======
 export const Filters = [
     ["Vrsta", ["Planinarenje","Obuća","Ostala oprema"]],
     ["Brend", ["Wild Country","Lanex","Petzl"]]
@@ -52,4 +50,3 @@ export const Oprema = {
   'Kaciga'          : { name: 'Kaciga',                 price: "471.75", vrsta: "Obuća", brend: "Wild Country"},
   'Klin'            : { name: 'Klin',                   price: "75", vrsta: "Planinarenje", brend: ""}
 }
->>>>>>> oprema
