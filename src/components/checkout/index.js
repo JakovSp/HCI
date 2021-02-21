@@ -7,9 +7,6 @@ import {useGlobalState} from "../../global/state"
 const Cart = () =>{
 
     const[cart, setCart] = useGlobalState("Cart")
-    if(!JSON.parse(localStorage.getItem("Cart"))){
-        localStorage.setItem("Cart",JSON.stringify([]))
-    }
     
     useEffect(() => {
         localStorage.setItem("Cart",JSON.stringify(cart))
