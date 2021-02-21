@@ -1,4 +1,4 @@
-import React,{useState} from "react"
+import React from "react"
 import styles from "./style.module.css"
 import ContentCard from "../../../components/ContentCard"
 import TecajeviTop from "../../../components/Images/Tecajevi/Top"

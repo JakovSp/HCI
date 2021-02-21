@@ -1,7 +1,7 @@
 export const navTabs = [
     {tab: 'Naslovna', to: '/'},
     {tab: 'Tečajevi', to: '/courses'}, 
-    {tab: 'Oprema', to: '/'}, 
+    {tab: 'Oprema', to: '/store'}, 
     {tab: 'Izleti', to: '/hiking'},
     {tab: 'Blog', to: '/blog'}
 ]
@@ -23,6 +23,7 @@ export const months = [
 
 export const Locations = ['Paklenica', 'Dinara', 'Kozjak', 'Mosor', 'Biokovo', 'Velebit']
 
+<<<<<<< HEAD
 export const hikingLocations = [
     {title: 'Žumberačko gorje', desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Morbi tincidunt augue interdum velit euismod in.', date: '01', guide: 'Ive Vasiljević'},
     {title: 'Sjeverni velebit', desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Morbi tincidunt augue interdum velit euismod in.', date: '02', guide: 'Jakov Spahija'},
@@ -35,3 +36,20 @@ export const hikingLocations = [
     {title: 'Kilimanjaro treking 2021', desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Morbi tincidunt augue interdum velit euismod in.', date: '28', guide: 'Ive Vasiljević'},
     {title: 'Dinara – Sinjal', desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Morbi tincidunt augue interdum velit euismod in.', date: '30', guide: 'Jakov Spahija'},
 ]
+=======
+export const Filters = [
+    ["Vrsta", ["Planinarenje","Obuća","Ostala oprema"]],
+    ["Brend", ["Wild Country","Lanex","Petzl"]]
+]
+
+export const Oprema = {
+  'Stap'            : { name: 'Štapovi za hodanje',     price: "59.95" , vrsta: "Ostala oprema", brend: ""},
+  'Karabiner'       : { name: 'Karabiner sa maticom',   price: "15", vrsta: "Planinarenje", brend: "Petzl"},
+  'Kreda'           : { name: 'Kreda',                  price: "10", vrsta: "Ostala oprema", brend: "" },
+  'Medjuosiguranje' : { name: 'Međuosiguranje',         price: "448.90", vrsta: "Planinarenje", brend: "Wild Country" },
+  'Pojas'           : { name: 'Pojas',                  price: "419.50", vrsta: "Obuća", brend: "Wild Country" },
+  'Kolotura'        : { name: 'Kolotura',               price: "170", vrsta: "Planinarenje", brend: "Lanex"},
+  'Kaciga'          : { name: 'Kaciga',                 price: "471.75", vrsta: "Obuća", brend: "Wild Country"},
+  'Klin'            : { name: 'Klin',                   price: "75", vrsta: "Planinarenje", brend: ""}
+}
+>>>>>>> oprema
