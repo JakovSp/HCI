@@ -39,7 +39,7 @@ const InfoForm = ()=>(
             </div >
 
         </div>
-        <div style={{margin:"6vh"}}>
+        <div style={{margin:"6vh"}} >
         <label className={styles.container} >Koristi adresu dostave za plaćanje
                 <input type="checkbox" checked="true" />
                 <span className={styles.checkbox} ></span>

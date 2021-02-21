@@ -10,7 +10,7 @@ const OpremaForm = ()=>{
     return (
     <div className={styles.page}>
         <FiltersForm list={list} setList={setList} />
-        <SelectionForm list={list} />
+        <SelectionForm list={list} setList={setList} />
     </div>
 )}
 

@@ -10,7 +10,7 @@
     width: 46vw;
     background-color: var(--color-tabs);
     align-content: center;
-    height: 75%;
+    max-height: 750px;
 }
 
 h2{
@@ -21,7 +21,6 @@ h2{
 .inventory{
     border: 2px solid var(--highlight-background);
     background-color: white;
-    max-height: 45vh;
     margin: 3vw;
     margin-top: 10px;
     overflow: scroll;

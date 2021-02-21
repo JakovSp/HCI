@@ -3,25 +3,26 @@ import styles from "./style.module.css"
 import ContentCard from "../../ContentCard"
 import {Oprema} from "../../../constants/constant"
 import ItemsImages from "../../Images/Oprema"
+import {useGlobalState} from "../../../global/state"
+import {setGlobalState} from 'react-hooks-global-state'
 
 function AddItem(item)
 {
-    let ar = new Array 
+    let list = JSON.parse(localStorage.getItem("Cart"))
     let index = -1
-    ar = JSON.parse(localStorage.getItem("Cart"))
-    if( (index = ar.findIndex(element => element[0] === item)) != -1 )
-    { ar[index][1] += 1 }
-    else{ ar.push([item, 1]) }
-    localStorage.setItem("Cart",JSON.stringify(ar))
+    if( (index = list.findIndex(element => element[0] === item)) != -1 )
+    { list[index][1] += 1 }
+    else{ list.push([item, 1]) }
+    return list
 }
 
-const SelectionForm = ({list})=>{
-
+const SelectionForm = ({list, setList})=>{
+    const[cart, setCart] = useGlobalState("Cart")
     return(
     <div className={styles.selection}>
         {list.map(item => 
             <div 
-                onClick={() => AddItem(item) } 
+                onClick={ () => setCart( AddItem(item)) } 
                 className={styles.element}>
                 <ContentCard
                     Image={() => <ItemsImages Item={item}/>} 
