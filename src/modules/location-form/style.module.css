@@ -20,3 +20,9 @@ hr{
     width: 100%;
     background-color: var(--highlight-background);
 }
+
+@media screen and (max-width: 900px){
+    .mapheader{
+        flex-direction: column;
+    }
+}

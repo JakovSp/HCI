@@ -14,8 +14,8 @@ const BriefForm = ({Location}) =>{
                     <label className={styles.container} onClick={()=> setRadio(levels.findIndex(element => element == el))} >
                         <input type="radio" name="radio"/>
                         <span className={styles.checkmark} ></span>
+                        <div style={{paddingLeft: "2rem"}}>{el}</div>
                     </label>
-                    {el}
                 </div>
             )}
         </div>
