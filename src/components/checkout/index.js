@@ -25,14 +25,14 @@ const Cart = () =>{
     },[cart])
 
     return(
-        <Link to={'/checkout'}> 
+        <Link to={ cart.length ? '/checkout' : '/store'}> 
         <div className={styles.cart} onMouseMove={ e => 
                     setcoord(move(e))
                 } onMouseOver={() => setHide(false)}  onMouseLeave={() => setHide(true)}>
             <img src={carticon} height="45px" /> 
             <div className={styles.size} >{ cart.length ? cart.length :
                 <>
-                    <div className={styles.emptycartlabel}  style={{ top: coord[0], left: coord[1] }}>Prazna Košarica</div>
+                    <div className={styles.emptycartlabel}  style={{ top: coord[0], left: coord[1] }}>Prazna košarica</div>
                     <FontAwesomeIcon className={styles.emptycarticon} height="12px" icon={faExclamationTriangle} color="darkred" />
                 </>}
             </div>
