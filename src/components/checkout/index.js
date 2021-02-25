@@ -19,6 +19,10 @@ const Cart = () =>{
     const[cart, setCart] = useGlobalState("Cart")
     const[hidden, setHide] = useState(true)
     const[coord, setcoord] = useState(["25px","25px"])
+    
+    if(!JSON.parse(myLocalStorage.getItem("Cart"))){
+        myLocalStorage.setItem("Cart",JSON.stringify([]))
+    }
 
     useEffect(() => {
         myLocalStorage.setItem("Cart",JSON.stringify(cart))
