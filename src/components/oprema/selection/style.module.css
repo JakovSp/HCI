@@ -10,7 +10,17 @@
     margin: 2vh 2vw;
     cursor: pointer;
     max-height: 250px;
-
+}
+.element:hover{
+    box-shadow: 2px 2px 3px 3px var(--color-disabled);
+}
+.element:active{
+    animation: addtocart 0.35s ease-in-out;
+}
+@keyframes addtocart {
+    40%{transform: scaleY(0.98) scaleX(0.98);}
+    75%{transform: scaleY(1.01) scaleX(1.01);}
+    100%{transform: scaleY(1) scaleX(1);}
 }
 
 .pricetag{
@@ -26,5 +36,5 @@
 .pricetag p{
     display: flex;
     align-self: flex-end;
-    margin: 4px 0;
+    margin: 4px 6px;
 }
