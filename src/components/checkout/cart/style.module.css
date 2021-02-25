@@ -1,3 +1,9 @@
+:root{
+    --button-color-idle: #a96e5a;
+    --button-color-active: #9e583c;
+    --button-color-text: #f6f7f9;
+    --button-color-disabled: var(--color-disabled);
+}
 .page{
     display: flex;
     flex-direction: column;
@@ -82,11 +88,16 @@ hr{
     font-weight: bold;
 }
 
-.information_block_button {
+.emptycart{
+    color: darkred;
+    font-weight: bold;
+}
+
+.checkout_button {
     padding: 20px 100px;
-    background-color: #a96e5a;
-    border-color: #a96e5a;
-    color: #f6f7f9;
+    background-color: var(--button-color-idle);
+    border-color: var(--button-color-idle);
+    color: var(--button-color-text);
     border-radius: 5px;
     text-decoration: none;
     font-size: 16px;
@@ -95,14 +106,29 @@ hr{
     text-align: center;
     cursor: pointer;
 }
-.information_block_button:hover{
-  color: #f6f7f9;
-  background-color: #9e583c;
-  border-color: #9e583c;
+.checkout_button:hover{
+  color: var(--button-color-text);
+  background-color: var(--button-color-active);
+  border-color: var(--button-color-active);
 }
-.information_block_button:active, .information_block_button:focus {
-  color: #f6f7f9;
-  background-color: #9e583c;
-  border-color: #9e583c;
+.checkout_button:active, .checkout_button:focus {
+  color: var(--button-color-text);
+  background-color: var(--button-color-active);
+  border-color: var(--button-color-active);
   box-shadow: 0 0 0 0.2rem #b97f67;
+}
+
+.checkout_disabled{
+    cursor: unset;
+    padding: 20px 100px;
+    background-color: var(--button-color-disabled);
+    border-color: var(--button-color-disabled);
+    color: var(--button-color-text);
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.2s;
+    max-width: 150px;
+    text-align: center;
+    cursor: pointer;
 }

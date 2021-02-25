@@ -7,5 +7,29 @@
 }
 .size{
     display: block;
-    position: absolute
+    position: absolute;
+    padding-right: 4px;
+}
+
+.emptycartlabel{
+    display: none;
+}
+.emptycarticon{
+    display: none;
+    visibility: hidden;
+}
+
+.cart:hover .emptycartlabel{
+    display: block;
+    position: absolute;
+    z-index: 1;
+    color: white;
+    border-radius: 4px;
+    padding: 2px;
+    font-size: 10px;
+    background-color: darkred;
+}
+.cart:hover .emptycarticon{
+    display: block;
+    visibility: visible;
 }
