@@ -80,7 +80,9 @@ const CartForm = ()=>{
                     <h3>{Sum()} HRK</h3>
                 </div>
                 </> :
-            <p className={styles.emptycart}>Prazna Košarica</p>
+            <p className={styles.emptycart}>
+                {"Košarica je prazna - dodajte neke proizvode"}
+            </p>
             }</div>
         <div style={{ marginTop: "10vh"}} ><Button text={"Obračun"} style={ cart.length ? styles.checkout_button : styles.checkout_disabled} /></div>
     </div>

@@ -32,7 +32,7 @@ const Cart = () =>{
             <img src={carticon} height="45px" /> 
             <div className={styles.size} >{ cart.length ? cart.length :
                 <>
-                    <div className={styles.emptycartlabel}  style={{ top: coord[0], left: coord[1] }}>Prazna Košarica</div>
+                    <div className={styles.emptycartlabel}  style={{ top: coord[0], left: coord[1] }}>Prazna košarica</div>
                     <FontAwesomeIcon className={styles.emptycarticon} height="12px" icon={faExclamationTriangle} color="darkred" />
                 </>}
             </div>
