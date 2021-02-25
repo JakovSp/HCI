@@ -14,6 +14,7 @@ function checkFilter(name,tick,filters)
     else{ ar.splice(ar.findIndex(element => element === name), 1) }
     return ar
 }
+
 function ApplyFilter(filters){
     var items = new Array
 
@@ -30,12 +31,26 @@ function ApplyFilter(filters){
     return items
 }
 
-const FiltersForm = ({list,setList})=>{
-    const [filters, setFilters] = useState([])
+function filterData(query) {
+    return Object.keys(Oprema).filter((el) => Oprema[el]["name"].toLowerCase().includes(query?.toLowerCase()))
+}
 
+const FiltersForm = ({list, setList})=>{
+    const [filters, setFilters] = useState([])
+    const [searchQuery, setSearchQuery] = useState()
+    const [hiding, setHide] = useState(false)
     return (
     <div className={styles.page}>
-        <input className={styles.inputfield} placeholder={ "search"} />
+        <div className={styles.inputfield} >
+            <input placeholder={""} onChange={ (e) => {
+                        setSearchQuery(e.target.value)
+                        setList(filterData(e.target.value, list))
+                    }}
+                    onFocus={() => setHide(true)} onBlur={ () => setHide(false)} />
+            <div className={styles.input_placeholder} style={{visibility: hiding? "hidden" : "visible"}} >
+                <FontAwesomeIcon icon={faSearch} color="var(--color-disabled)" /> 
+            </div>
+        </div>
         {Filters.map(FilterType => 
             <div className={styles.filterblock}>
                 <p>{FilterType[0]}</p>

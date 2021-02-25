@@ -89,3 +89,19 @@ hr{
   height: 13px;
   background-color: var(--highlight-background);
 }
+
+.searchbar{
+  display: block;
+  position: absolute;
+}
+
+.inputfield{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.input_placeholder{
+  display: block;
+  position: absolute;
+  padding-right: 0.5rem;
+}
