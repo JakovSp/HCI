@@ -25,7 +25,7 @@ const Cart = () =>{
     },[cart])
 
     return(
-        <Link to={'/checkout'}> 
+        <Link to={ cart.length ? '/checkout' : '/store'}> 
         <div className={styles.cart} onMouseMove={ e => 
                     setcoord(move(e))
                 } onMouseOver={() => setHide(false)}  onMouseLeave={() => setHide(true)}>
