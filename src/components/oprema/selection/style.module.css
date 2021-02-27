@@ -1,0 +1,30 @@
+.selection{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 78%;
+}
+
+.element{
+    display: flex;
+    margin: 2vh 2vw;
+    cursor: pointer;
+    max-height: 250px;
+
+}
+
+.pricetag{
+    display: flex;
+    flex-direction: column;
+    min-width: 100%;
+}
+.pricetag h4{
+    display: flex;
+    align-self: center;
+    margin: 6px 0;
+}
+.pricetag p{
+    display: flex;
+    align-self: flex-end;
+    margin: 4px 0;
+}

@@ -1,4 +1,4 @@
-import React, {useState} from "react"
+import React from "react"
 import HeaderFooterLayout from "../layout/header-footer"
 import TecajeviMain from "../modules/tecajevi"
 
