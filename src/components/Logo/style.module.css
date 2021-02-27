@@ -1,7 +1,25 @@
-.logo {
+.logo1 {
   cursor: pointer;
+  display: block;
 }
-.logo img{
+.logo1 img{
   display: flex;
   flex-flow: column;
+}
+.logo2 {
+  cursor: pointer;
+  display: none;
+}
+.logo2 img{
+  display: flex;
+  flex-flow: column;
+}
+
+@media only screen and (max-width: 1024px) {
+  .logo2 {
+    display: block;
+  }
+  .logo1 {
+    display: none;
+  }
 }

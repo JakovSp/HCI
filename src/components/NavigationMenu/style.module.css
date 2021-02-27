@@ -30,3 +30,8 @@
   transition: all 0.3s;
   border-color:#004e7c;
 }
+@media only screen and (max-width: 1024px) {
+  .navigationMenu {
+    display: none;
+  }
+}

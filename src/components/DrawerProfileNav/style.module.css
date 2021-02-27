@@ -1,7 +1,3 @@
-.profile{
-    display: flex;
-    flex-direction: row;
-}
 .login_button {
     padding: 10px 30px;
     background-color: #004e7c;
@@ -23,9 +19,4 @@
     background-color: #013553;
     border-color: #013553;
     box-shadow: none;
-}
-@media only screen and (max-width: 1024px) {
-    .login_button {
-      display: none;
-   }
 }
