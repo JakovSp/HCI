@@ -110,3 +110,38 @@
     grid-column: span 4;
     margin-top: 50px;
 }
+@media only screen and (max-width: 1685px) {
+    .hikings_container_month {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media only screen and (max-width: 1230px) {
+    .hikings_container_month {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media only screen and (max-width: 1024px) {
+    .hikings_container_month {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .current_month_button_disable {
+        font-size: 12px;
+        width: 70px;
+    }
+    .current_month_button_enable {
+        font-size: 12px;
+        width: 70px;
+    }
+    .arrow_disable {
+        font-size: 14px;
+    }
+    .arrow_enable {
+        font-size: 14px;
+    }
+    .month_title {
+        font-size: 14px;
+    }
+    .control_container {
+        gap: 20px;
+    }
+}
