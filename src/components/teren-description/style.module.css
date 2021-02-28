@@ -19,7 +19,7 @@
     display: inline;
     font-size: 1.2em;
     flex-direction: min;
-    max-height: 24vw;
+    max-height: 13.25em;
     overflow: hidden;
     text-overflow: ellipsis;
 }

@@ -23,7 +23,7 @@ export const Desc2 = () => (
         </div>
         <div className={styles.bottomform}>
             <Button Text={"Najavi"}/>
-            <p> Poljud 8. Mediteranskih igara br.2, Split</p>
+            <p style={{textAlign: "right"}}> Poljud 8. Mediteranskih igara br.2, Split</p>
         </div>                            
     </div>
  )    

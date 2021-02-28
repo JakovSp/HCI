@@ -4,8 +4,10 @@ import TecajeviForm from "./tecajevi-forms"
 import DvoranaForm from "./dvorana-forms"
 import TerenForm from "./teren-forms"
 import TecajeviHeader from "../../components/tecajevi-header"
-const AddPages = {  "Dvorana" : <DvoranaForm />,
-"Teren" : <TerenForm />}
+
+const AddPages = {
+  "Dvorana" : <DvoranaForm />,
+  "Teren" : <TerenForm />}
 
 
 const TecajeviMain = () => {

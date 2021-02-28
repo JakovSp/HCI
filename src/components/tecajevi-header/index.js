@@ -1,7 +1,7 @@
 import React from "react"
 import styles from "./styles.module.css"
 import HeaderImage from "../Images/Tecajevi/HeaderImage"
-import CustomButton from "../CustomButton"
+import Button from "../button"
 
 const TecajeviHeader = () => (
     <div className={styles.overlay} >
@@ -10,7 +10,7 @@ const TecajeviHeader = () => (
             <p>
                 Obuka planinarenja, uvod u opremu, navigacija ...
             </p>
-            <CustomButton Text={"Saznajte Više"} />
+            <Button text={"Saznajte Više"} style={styles.header_button} />
         </div>
     </div>
   )

@@ -4,36 +4,109 @@
     flex-direction: column;
 }
 
-.deck {
+/*Top*/
+.deck:nth-child(1) {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     padding-top: 5rem;
     flex: 2;
 }
+.deck:nth-child(1) > div > p{
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding: 1rem 0;
+}
+/**/
 
-.deck2 {
+/*Bottom*/
+.deck:nth-child(2){
     cursor: pointer;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     padding-top: 5rem;
 }
+.deck:nth-child(2) > div > p{
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding:  0 5rem;
+}
+/**/
 
-@media screen and (min-width: 1780px){
+
+
+@media screen and (min-width: 1600px){
     .page{
         flex-direction: row;
         justify-content: space-between;
     }
-
-    .deck{
+    .deck:nth-child(1){
         margin-right: 8vw;
+        flex-grow: 1;
     }
-
-    .deck2 {
+    .deck:nth-child(2) {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        flex-grow: 0;
     }
 }
 
-@media screen and (max-width: 1360px){}
+@media screen and (max-width: 1150px){
+
+
+    .deck:nth-child(2){
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .deck:nth-child(2) > div{
+        margin:20px 25px;
+        padding:  0;
+    }
+
+}
+@media screen and (max-width: 1024px){
+    .deck:nth-child(1){
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .deck:nth-child(1) > div{
+        margin: 30px 50px;
+    }
+    .deck:nth-child(2){
+        flex-wrap: nowrap;
+        flex-direction: column;
+        justify-content: center;
+        margin: 20px 45px;
+
+    }
+    .deck:nth-child(2) > div > p{
+        font-size: 1rem;
+    }
+
+}
+
+@media screen and (max-width: 860px){
+    .deck:nth-child(1){
+        flex-direction: column;
+    }    }
+
+@media screen and (max-width: 500px){
+    .deck:nth-child(1) > div{
+        justify-content: unset;
+        margin: 15xp 30px;
+    }
+    
+    .deck:nth-child(2){
+        margin: 20px 5px;
+    }
+    .deck:nth-child(2) > div > p{
+        padding: 0.4rem 1rem;
+    }
+}
