@@ -4,7 +4,7 @@
     padding-left: 3vw;
 }
 
-input{
+.inputfield{
   display: flex;
   font-size: 13px;
   height: 25px;

@@ -50,3 +50,5 @@ export const Oprema = {
   'Kaciga'          : { name: 'Kaciga',                 price: "471.75", vrsta: "Obuća", brend: "Wild Country"},
   'Klin'            : { name: 'Klin',                   price: "75", vrsta: "Planinarenje", brend: ""}
 }
+
+export const blogFilters = ['Sve', 'Pustolovine', 'Oprema', 'Natjecanja', 'Preporuke']
