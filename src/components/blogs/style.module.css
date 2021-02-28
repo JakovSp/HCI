@@ -78,3 +78,53 @@ input[type=text], select {
     grid-column: span 4;
     margin-top: 50px;
 }
+.combobox {
+    position: relative;
+    cursor: pointer;
+    text-align: center;
+    height: 36px;
+    width: 115px;
+    border-style: solid;
+    border-width: thin;
+    border-radius: 5px;
+    font-size: 12px;
+    line-height: 36px;
+    text-transform: uppercase;
+    display: none;
+  }
+  
+  .combobox ul {
+    list-style: none;
+    display: flex;
+    flex-flow: column;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 38px;
+    background-color: #eee;
+    z-index: 10;
+  }
+@media only screen and (max-width: 1685px) {
+    .blogs_container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media only screen and (max-width: 1230px) {
+    .blogs_container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media only screen and (max-width: 1024px) {
+    .blogs_container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .button_control_container {
+        display: none;
+    }
+    .combobox {
+        display: block;
+    }
+    .control_container {
+        gap: 50px;
+    }
+}

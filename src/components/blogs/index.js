@@ -1,10 +1,12 @@
 import React, { useState } from 'react'
 import styles from './style.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSearch } from '@fortawesome/free-solid-svg-icons'
+import { faSearch, faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons'
 import CardBlog from '../card-blog'
 import { useStaticQuery, graphql } from "gatsby"
 import { myLocalStorage } from '../../helpers/local-storage'
+import { blogFilters } from '../../constants/constant'
+import ComboboxItem from './../combobox-item'
 
 const Blogs = () => {
 
@@ -36,6 +38,7 @@ const Blogs = () => {
 
     const dataFilter = data.allContentfulBlogPreview.nodes
     myLocalStorage.removeItem("searchQuery")
+    const [open, setOpen] = useState(false)
     const [currentCategory, setCurrentCategory] = useState("Sve")
     const [visibleData, setVisibleData] = useState(data.allContentfulBlogPreview.nodes)
     const [searchQuery, setSearchQuery] = useState()
@@ -64,6 +67,19 @@ const Blogs = () => {
     return(
     <main className={styles.container}>
         <div className={styles.control_container}>
+            <div className={styles.combobox} onClick={() => setOpen(!open) }>
+                {<ul style={{display: open ? 'flex' : 'none'}}>
+                    {blogFilters.map(el => 
+                    <ComboboxItem 
+                    category={el}
+                    setSelected={ () => toggleCategory(el)}
+                    selected={el === currentCategory}
+                    />)}
+                </ul>
+                }
+                <FontAwesomeIcon icon={ (open) ? faChevronUp : faChevronDown} size="0.2x" style={  {paddingRight: "5px"}} />
+                {currentCategory}
+            </div>
             <div className={styles.button_control_container}>
                 <a style={{ backgroundColor: (currentCategory == "Sve") ? '' : 'inherit', color: (currentCategory == "Sve") ? '' : '#B73225'}} onClick={ () => toggleCategory("Sve") }>
                     Sve
