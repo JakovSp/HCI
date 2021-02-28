@@ -8,7 +8,7 @@ const HamburgerMenu = () => {
     return(
         <DrawerMenuContext.Consumer>
             {
-                ({isDrawerOpen, toggleDrawer}) => (
+                ({isDrawerOpen, toggleDrawer}) =>  (
                     <div className={cx(styles.nav, (isDrawerOpen) ? styles.open : '')} onClick={ toggleDrawer }>
                         <span></span>
                         <span></span>

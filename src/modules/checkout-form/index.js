@@ -5,7 +5,7 @@ import styles from "./style.module.css"
 import CustomButton from "../../components/CustomButton"
 
 const CheckoutFrom = ()=>(
-    <div className={styles.main}>
+    <div className={styles.checkout}>
         <InfoForm />
         <CartForm />
     </div>

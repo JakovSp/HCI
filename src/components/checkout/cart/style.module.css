@@ -132,3 +132,9 @@ hr{
     text-align: center;
     cursor: pointer;
 }
+
+@media screen and (max-width: 1024px){
+    .cart{
+      width: 100%;
+    }
+  }

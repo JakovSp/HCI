@@ -84,7 +84,7 @@ const CartForm = ()=>{
                 {"Košarica je prazna - dodajte neke proizvode"}
             </p>
             }</div>
-        <div style={{ marginTop: "10vh"}} ><Button text={"Obračun"} style={ cart.length ? styles.checkout_button : styles.checkout_disabled} /></div>
+        <div style={{ margin: "10vh 0"}} ><Button text={"Obračun"} style={ cart.length ? styles.checkout_button : styles.checkout_disabled} /></div>
     </div>
 
 )}
