@@ -3,16 +3,16 @@
     flex-direction: column;
     margin: 0;
     padding: 0 1.5rem;
-    font-size: 1em;
+    font-size: 1rem;
     margin: 0;
     justify-content: space-between;
     max-height: 820px;
 
 }
 
-.formdesc div p {
+.formdesc > div > p {
     display:inline-block;
-    max-height: 60px;
+    max-height: 5.25rem;
     margin-bottom: 0;
     overflow:hidden;
     text-overflow: ellipsis;
@@ -22,12 +22,21 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-bottom: 0.5rem;
-    padding-top: rem;
+    margin: 0.5rem 0;
 }
 
-.bottomform p{
+.bottomform > p{
     margin: 0;
     padding: 0;
     color: var(--highlight-background);
+}
+
+@media screen and (max-width: 500px){
+
+    .formdesc{
+        font-size: 0.85rem;
+        overflow-y: hidden;
+        word-wrap:break-word;
+        text-overflow: ellipsis;
+    }
 }

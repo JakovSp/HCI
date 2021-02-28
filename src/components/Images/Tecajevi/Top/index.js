@@ -2,7 +2,7 @@ import React from 'react'
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
-const TecajeviTop = ({ImageName}) => {
+const TecajeviTop = ({ImageName, width}) => {
     const data = useStaticQuery(graphql`
     query {
         Prva: file(relativePath: { eq: "Tecajevi/rock climbing 2.jpg" }) {
@@ -28,7 +28,7 @@ const TecajeviTop = ({ImageName}) => {
         }
     }`);
 return (
-    <div style={{width: "20rem", objectFit: "cover"}}>
+    <div style={{width: width, objectFit: "cover"}}>
       <Img fluid={data[ImageName].childImageSharp.fluid} />
     </div>
 )
