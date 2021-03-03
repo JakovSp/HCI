@@ -52,3 +52,12 @@ export const Oprema = {
 }
 
 export const blogFilters = ['Sve', 'Pustolovine', 'Oprema', 'Natjecanja', 'Preporuke']
+
+export const LatLng = {
+        'Paklenica' : [44.3666652,  15.4333316],
+        'Dinara'    : [44.062475,   16.387691],
+        'Kozjak'    : [43.580894591913015, 16.405876175638145],
+        'Mosor'     : [43.533487978302546, 16.633118683550983],
+        'Biokovo'   : [43.32549550315907, 17.049166660128265],
+        'Velebit'   : [44.53209743394053, 15.235888421301288]    
+}
