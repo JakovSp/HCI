@@ -1,6 +1,6 @@
 .page{
     display: flex;
-    margin-bottom: 1rem;
+    margin-bottom: 6rem;
     flex-direction: column;
 }
 
@@ -59,8 +59,6 @@
 }
 
 @media screen and (max-width: 1150px){
-
-
     .deck:nth-child(2){
         flex-wrap: wrap;
         justify-content: center;
@@ -69,9 +67,12 @@
         margin:20px 25px;
         padding:  0;
     }
-
 }
+
 @media screen and (max-width: 1024px){
+    .page{
+        margin-bottom: 1rem;
+    }
     .deck:nth-child(1){
         flex-wrap: wrap;
         justify-content: center;

@@ -4,6 +4,7 @@
     --button-color-text: #f6f7f9;
     --button-color-disabled: var(--color-disabled);
 }
+
 .overlay{
     display: flex;
     position: relative;

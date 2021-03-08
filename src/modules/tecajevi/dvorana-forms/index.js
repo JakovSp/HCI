@@ -5,11 +5,10 @@ import * as images from "../../../components/Images/Dvorana"
 import {Desc1,Desc2} from "../../../components/CardDescription/dvoranadesc"
 
 const DvoranaForm = () => {
-
-    const [showimage, setShowImage] = useState(true)
+    const [showimage, setShowImage] = useState(window.matchMedia("(min-width: 1024px)").matches)
 
     function QueryResize(){
-        if(window.matchMedia("(max-width: 700px)").matches){
+        if(window.matchMedia("(max-width: 1024px)").matches){
             setShowImage(false)
         }else{
             setShowImage(true)

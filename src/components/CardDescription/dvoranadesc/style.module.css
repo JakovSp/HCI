@@ -1,3 +1,9 @@
+:root{
+    --button-color-idle: #a96e5a;
+    --button-color-active: #9e583c;
+    --button-color-text: #f6f7f9;
+    --button-color-disabled: var(--color-disabled);
+}
 .formdesc{
     display: flex;
     flex-direction: column;
@@ -31,12 +37,40 @@
     color: var(--highlight-background);
 }
 
-@media screen and (max-width: 500px){
+.signup_button{
+    padding: 10px 25px;
+    background-color: var(--button-color-idle);
+    border-color: var(--button-color-idle);
+    color: var(--button-color-text);
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.3rem;
+    transition: 0.2s;
+    max-width: 180px;
+    text-align: center;
+    cursor: pointer;
+}
+.signup_button:hover{
+  color: var(--button-color-text);
+  background-color: var(--button-color-active);
+  border-color: var(--button-color-active);
+}
+.signup_button:active, .signup_button:focus {
+  color: var(--button-color-text);
+  background-color: var(--button-color-active);
+  border-color: var(--button-color-active);
+  box-shadow: 0 0 0 0.2rem #b97f67;
+}
+
+@media screen and (max-width: 600px){
 
     .formdesc{
         font-size: 0.85rem;
         overflow-y: hidden;
         word-wrap:break-word;
         text-overflow: ellipsis;
+    }
+    .signup_button{
+        display: "";
     }
 }

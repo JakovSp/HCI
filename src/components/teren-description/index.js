@@ -33,7 +33,7 @@ const TerenDescription = ({activeLocation}) => {
             </div>
             <div className={styles.bottom}>
                 <p>Pročitajte više</p>
-                <Button text="Prijavi se" action={() => scrollTo("#map")} page="/courses#map" />
+                <Button text="Prijavi se" action={() => scrollTo("#map")} page="/courses#map" style={styles.signup_button} />
             </div>
         </div>
     </div>
