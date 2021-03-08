@@ -36,7 +36,7 @@ function ChangeAmnt(item, step){
 function Sum(){
     let list = JSON.parse(myLocalStorage.getItem("Cart"))
     let sum = 0;
-    if(Array.isArray(list) && list.length){
+    if(!Array.isArray(list) || !list.length){
         return sum;
     }
     for (var i = list.length; i--;) {

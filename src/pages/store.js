@@ -3,7 +3,7 @@ import HeaderFooterLayout from "../layout/header-footer"
 import OpremaForm from "../modules/oprema-form"
 
 const OpremaPage = () => (
-  <HeaderFooterLayout activeTab="Naslovna">
+  <HeaderFooterLayout activeTab="Oprema">
       <OpremaForm />
   </HeaderFooterLayout>
 )

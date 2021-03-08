@@ -36,9 +36,9 @@ const TerenHeader = ({selected,setSelected}) =>{
     
     return (
     <div className={styles.header} >
-        <FontAwesomeIcon className={styles.arrow} size="3x" icon={faChevronLeft} onClick={() => {
+        <div style={{visibility: desktopmode? "hidden" : "visible"}}><FontAwesomeIcon className={styles.arrow} size="3x" icon={faChevronLeft} onClick={() => {
                 index = rotate(index, -1)
-                setSelected(Locations[index])}}/>
+                setSelected(Locations[index])}}/></div>
 
         { desktopmode ? Locations.map(el => <>
                 {el === selected ?
@@ -50,9 +50,9 @@ const TerenHeader = ({selected,setSelected}) =>{
                 }</>) 
                 : <li className={styles.active} ><images.Selected ImageName={selected} /><p>{selected}</p></li>
             }
-        <FontAwesomeIcon className={styles.arrow} size="3x" icon={faChevronRight} onClick={() => {
+        <div style={{visibility: desktopmode? "hidden" : "visible"}}><FontAwesomeIcon className={styles.arrow} size="3x" icon={faChevronRight} onClick={() => {
                 index = rotate(index, 1)
-                setSelected(Locations[index])}}/>
+                setSelected(Locations[index])}}/></div>
     </div>
 )}
 

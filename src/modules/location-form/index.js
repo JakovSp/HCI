@@ -5,8 +5,8 @@ import BriefForm from "../../components/location-map/brief"
 import Description from "../../components/location-map/description"
 
 const LocationForm = ({location}) =>{
-    const [mapWidth, setMapWidth] = useState("55vw")
-    const [mapHeight, setMapHeight] = useState("65vh")
+    const [mapWidth, setMapWidth] = useState(() => {if(window.matchMedia("(max-width: 1024px)").matches){return "85vw"}else{ return "55vw"}})
+    const [mapHeight, setMapHeight] = useState(() => {if(window.matchMedia("(max-width: 1024px)").matches){return "55vh"}else{ return "65vh"}})
 
     function QueryResize(){
         if(window.matchMedia("(max-width: 1024px)").matches){   
