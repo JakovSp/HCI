@@ -31,20 +31,18 @@ function ApplyFilter(filters){
     return items
 }
 
-function filterData(query) {
-    return Object.keys(Oprema).filter((el) => Oprema[el]["name"].toLowerCase().includes(query?.toLowerCase()))
+function filterData(query, filters) {
+    return ApplyFilter(filters).filter((el) => Oprema[el]["name"].toLowerCase().includes(query?.toLowerCase()))
 }
 
 const FiltersForm = ({list, setList})=>{
     const [filters, setFilters] = useState([])
-    const [searchQuery, setSearchQuery] = useState()
     const [hiding, setHide] = useState(false)
     return (
     <div className={styles.page}>
         <div className={styles.inputfield} >
             <input placeholder={""} onChange={ (e) => {
-                        setSearchQuery(e.target.value)
-                        setList(filterData(e.target.value, list))
+                        setList(filterData(e.target.value, filters))
                     }}
                     onFocus={() => setHide(true)} onBlur={ () => setHide(false)} />
             <div className={styles.input_placeholder} style={{visibility: hiding? "hidden" : "visible"}} >

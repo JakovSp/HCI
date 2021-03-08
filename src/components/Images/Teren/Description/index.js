@@ -2,7 +2,7 @@ import React from 'react'
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
-const GradientImage = ({ImageName}) => {
+const GradientImage = ({ImageName, width}) => {
   const data = useStaticQuery(graphql`
   query {
     Paklenica: file(relativePath: { eq: "Teren/paklenica-description.png" }) {
@@ -49,7 +49,7 @@ const GradientImage = ({ImageName}) => {
     }
   }`)
  return (
-      <div style={{width: "80vw", objectFit: "cover"}}>
+      <div style={{width: width, objectFit: "cover"}}>
         <Img fluid={data[ImageName].childImageSharp.fluid} />
       </div>
   )

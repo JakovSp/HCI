@@ -49,7 +49,7 @@ const Unselected = ({ImageName}) => {
     }
   }`)
  return (
-      <div style={{width: "10vw", objectFit: "cover"}}>
+      <div style={{width: "128px", objectFit: "cover"}}>
         <Img fluid={data[ImageName].childImageSharp.fluid} />
       </div>
   )

@@ -36,6 +36,9 @@ function ChangeAmnt(item, step){
 function Sum(){
     let list = JSON.parse(myLocalStorage.getItem("Cart"))
     let sum = 0;
+    if(Array.isArray(list) && list.length){
+        return sum;
+    }
     for (var i = list.length; i--;) {
         sum += list[i][1] * parseFloat(Oprema[list[i][0]]["price"])
     }
@@ -52,7 +55,7 @@ const CartForm = ()=>{
     <div className={styles.page}>
         <div className={styles.cart}>
             <h2>Košarica</h2>
-            { cart.length? <>
+            { Array.isArray(cart) && cart.length? <>
                 <div className={styles.inventory}>
                     {list.map( el => 
                     <li>
@@ -84,7 +87,7 @@ const CartForm = ()=>{
                 {"Košarica je prazna - dodajte neke proizvode"}
             </p>
             }</div>
-        <div style={{ margin: "10vh 0"}} ><Button text={"Obračun"} style={ cart.length ? styles.checkout_button : styles.checkout_disabled} /></div>
+        <div style={{ margin: "10vh 0"}} ><Button text={"Obračun"} style={ Array.isArray(cart) && cart.length ? styles.checkout_button : styles.checkout_disabled} /></div>
     </div>
 
 )}

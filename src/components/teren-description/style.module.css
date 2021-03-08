@@ -18,7 +18,7 @@
 .text{
     display: inline;
     font-size: 1.2em;
-    flex-direction: min;
+    flex-direction: column;
     max-height: 13.25em;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -42,4 +42,22 @@
     cursor: pointer;
 }
 
-@media screen and (max-width: 800px){}
+@media screen and (max-width: 1024px){
+    .description{
+        display: flex;
+        z-index: 0;
+        position:unset;
+        margin: 0;
+        background-color: var(--color-tabs);
+        padding: 20px;
+        width: 100%;
+        min-height: 100%;
+        margin: 0 15px;
+        flex-shrink: 1;
+    }
+    .text{
+        display: flex;
+        min-height: 100%;
+        max-height: initial;
+    }
+}

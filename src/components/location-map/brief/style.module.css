@@ -1,7 +1,6 @@
 .brief{
     display: flex;
     flex-direction: column;
-    padding-top: 5vh;
     padding-left: 2vw;
 }
 .selector{
@@ -90,3 +89,9 @@
     border-radius: 50%;
     background: var(--highlight-background);
   }
+
+  @media screen and (max-width: 1024px){
+    .brief{
+        margin-top: 7vh;
+    }
+}

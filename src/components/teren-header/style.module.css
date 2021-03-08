@@ -4,6 +4,12 @@
     background-color: var(--color-tabs);
     justify-content: space-evenly;
     margin: 4vh 0;
+    align-items: center;
+    width: 100%;
+}
+
+.arrow{
+    cursor: pointer;
 }
 
 .header li{
@@ -25,4 +31,4 @@
 .header p{
     margin: 0;
     font-size: 2.5vh;
-}    
+}

@@ -6,6 +6,4 @@ export const {useGlobalState} = createGlobalState({Cart : () => {
         myLocalStorage.setItem("Cart",JSON.stringify([]))
     }
     return JSON.parse(myLocalStorage.getItem("Cart"))
-},
-    location: "Paklenica"
-})
+}})

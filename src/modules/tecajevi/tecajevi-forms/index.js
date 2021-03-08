@@ -8,14 +8,13 @@ const Tabs=["Dvorana","Literatura","Teren"]
 
 const TecajeviForm = ({selected, setSelected}) => {
 
-    const[cardtype, setCardType] = useState("column")
+    const[cardtype, setCardType] = useState(() => { if(window.matchMedia("(max-width: 860px)").matches){ return "row" } else {return "column"}})
     function QueryResize(){
         if(window.matchMedia("(max-width: 860px)").matches){
             setCardType("row")
         }else{
             setCardType("column")
         }
-
     }
     
     useEffect(() => {
