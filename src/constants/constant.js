@@ -42,7 +42,7 @@ export const Filters = [
 
 export const Oprema = {
   'Stap'            : { name: 'Štapovi za hodanje',     price: "59.95" , vrsta: "Ostala oprema", brend: ""},
-  'Karabiner'       : { name: 'Karabiner sa maticom',   price: "15", vrsta: "Planinarenje", brend: "Petzl"},
+  'Karabiner'       : { name: 'Karabiner',              price: "15", vrsta: "Planinarenje", brend: "Petzl"},
   'Kreda'           : { name: 'Kreda',                  price: "10", vrsta: "Ostala oprema", brend: "" },
   'Medjuosiguranje' : { name: 'Međuosiguranje',         price: "448.90", vrsta: "Planinarenje", brend: "Wild Country" },
   'Pojas'           : { name: 'Pojas',                  price: "419.50", vrsta: "Obuća", brend: "Wild Country" },
