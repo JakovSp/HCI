@@ -4,11 +4,13 @@ import TecajeviForm from "./tecajevi-forms"
 import DvoranaForm from "./dvorana-forms"
 import TerenForm from "./teren-forms"
 import TecajeviHeader from "../../components/tecajevi-header"
+import Literatura from "../../components/literatura"
 
 const TecajeviMain = () => {
-  const [selectedPage, setSelectedPage] = useState("Dvorana")
+  const [selectedPage, setSelectedPage] = useState("Literatura")
   const AddPages = {  "Dvorana" : <DvoranaForm />,
-                      "Teren" : <TerenForm />}
+                      "Teren" : <TerenForm />,
+                      "Literatura" : <Literatura/>}
   return(
     <div className={styles.page}>
       <TecajeviHeader />
