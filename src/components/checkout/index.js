@@ -11,8 +11,8 @@ function move(e)
 {
     let x = e.clientX;
     let y = e.clientY;
-    let top =  y - e.currentTarget.offsetTop - 5 + "px";
-    let left = x - e.currentTarget.offsetLeft - 7 + "px";
+    let top =  y - e.currentTarget.offsetTop + 4 + "px";
+    let left = x - e.currentTarget.offsetLeft + 4 + "px";
     return [top,left]
 }
 const Cart = () =>{

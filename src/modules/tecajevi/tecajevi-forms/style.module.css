@@ -98,7 +98,7 @@
         flex-direction: column;
     }    }
 
-@media screen and (max-width: 500px){
+@media screen and (max-width: 700px){
     .deck:nth-child(1) > div{
         justify-content: unset;
         margin: 15xp 30px;
