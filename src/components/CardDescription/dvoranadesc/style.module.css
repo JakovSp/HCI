@@ -31,3 +31,26 @@
     padding: 0;
     color: var(--highlight-background);
 }
+
+.button {
+    padding: 8px 30px;
+    background-color: #bb6058;
+    border-color: #bb6058;
+    color: #f6f7f9;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.2s;
+    max-width: 100px;
+}
+.button:hover{
+    color: #f6f7f9;
+    background-color: #c0564c;
+    border-color: #c0564c;
+}
+.button:active, .login_button:focus {
+    color: #f6f7f9;
+    background-color: #bb6058;
+    border-color: #bb6058;
+    box-shadow: none;
+}

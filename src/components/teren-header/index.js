@@ -7,8 +7,8 @@ const TerenHeader = ({selected,setSelected}) =>(
     <div className={styles.header} >
     {Locations.map(el => <>
         {el === selected ?
-        <li className={styles.active} ><images.Selected ImageName={el} /><p>{el}</p></li>: 
-        <li onClick={() => setSelected(el)} ><images.Unselected ImageName={el} /><p>{el}</p></li>}
+        <li style={{marginTop: '20px'}} className={styles.active} ><images.Selected ImageName={el}/><p style={{marginTop: '10px', marginBottom: '10px'}}>{el}</p></li>: 
+        <li style={{marginTop: '20px'}} onClick={() => setSelected(el)} ><images.Unselected ImageName={el} /><p style={{marginTop: '10px', marginBottom: '10px'}}>{el}</p></li>}
         </>
     )}
 

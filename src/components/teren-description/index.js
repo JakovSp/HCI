@@ -1,7 +1,7 @@
 import React from "react"
 import styles from "./style.module.css"
 import GradientImage from "../Images/Teren/Description"
-import Button from "../CustomButton"
+import Button from "../button"
 import LocationDesc from "./descriptiontext"
 
 const TerenDescription = ({activeLocation}) => (
@@ -11,11 +11,9 @@ const TerenDescription = ({activeLocation}) => (
                 { LocationDesc[activeLocation]}
             </div>
             <div className={styles.bottom}>
-                <p>Pročitajte više</p>
-                <Button Text={"Prijavi se"}/>
+            <Button text="Prijavi se" style={styles.button} page="" action={ () => {} }/>
             </div>
         </div>
-        <GradientImage ImageName={activeLocation}/>
     </div>
 )
 
