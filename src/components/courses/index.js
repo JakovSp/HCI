@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import styles from './style.module.css'
 import { useStaticQuery, graphql } from "gatsby"
 import CardCourses from '../card-courses'
@@ -16,6 +16,21 @@ const coursesTitles = ["Pobijedite strah of visine", "Naučite vrijednosti timsk
 const Courses = () => {
 
     const [isFieldOpen, setFieldOpen] = useState(false)
+    const [desktopmode, setDesktopmode] = useState(window.matchMedia("(min-width: 1024px)").matches)
+
+    function QueryResize(){
+      if(window.matchMedia("(max-width: 1024px)").matches){
+          setDesktopmode(false)
+      }else{
+          setDesktopmode(true)
+      }
+  }
+  
+    useEffect(() => {
+        window.addEventListener("resize", QueryResize)
+        return () => { window.removeEventListener("resize",QueryResize)}
+    },[desktopmode])
+
     const toggleField = () => {
       if(isCourtOpen === true) {
         toggleCourt()
@@ -76,8 +91,8 @@ const Courses = () => {
       </div>
       <div className={styles.collapseContent} style={{ display: (isFieldOpen || isCourtOpen) ? 'block' : 'none' }}>
         <div className={styles.court} style={{ display: (isCourtOpen) ? 'flex' : 'none' }}>
-          <ContentCard Border={true} Direction={"row"} Image={images.Dvorana1} Text={<Desc1/>} />
-          <ContentCard Border={true} Direction={"row-reverse"} Image={images.Dvorana2} Text={<Desc2/>} />
+          <ContentCard Border={true} Direction={"row"} Image={desktopmode? images.Dvorana1 : () => <div/>} Text={<Desc1/>} />
+          <ContentCard Border={true} Direction={"row-reverse"} Image={desktopmode? images.Dvorana2 : () => <div/>} Text={<Desc2/>} />
                
         </div>
         <div className={styles.field} style={{ display: (isFieldOpen) ? 'flex' : 'none' }}>

@@ -56,7 +56,7 @@
 .court {
     display: flex;
     flex-direction: row;
-    gap: 80px;
+    gap: 35px;
 }
 .field {
     display: flex;
@@ -108,3 +108,29 @@
     transform: rotate(180deg);
 }
 
+
+@media screen and (max-width: 1700px){
+    .court{
+        flex-direction: column;
+        gap: 25px;
+    }
+    .court > div{
+        margin: 0 1vw;
+    }
+}
+
+@media screen and (max-width: 1024px){
+    .court p{
+        font-size: 10px;
+    }
+    .deck{
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 40px;
+    }
+    .deck1{
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 20px;
+    }
+}

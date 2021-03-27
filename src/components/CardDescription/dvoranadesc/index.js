@@ -21,9 +21,9 @@ export const Desc2 = () => (
             <h3>{"Penjački centar Marulianus"}</h3>
             <p >Infromacije možete dobiti svaki radni dan 16-20h u prostorijama dvorane. Raspored korištenja dvorane ima posebne periode za natjecatelje, predškolarce, tri generacije školaraca te za odrasle.</p>
         </div>
-        <div className={styles.bottomform}>
-            <Button style={styles.button} text={"Najavi"} page="" action={ () => {} }/>
+        <div className={styles.bottomform} style={{ flexDirection: "row-reverse"}}>
             <p> Poljud 8. Mediteranskih igara br.2, Split</p>
+            <Button style={styles.button} text={"Najavi"} page="" action={ () => {} }/>
         </div>                            
     </div>
  )    
