@@ -1,18 +1,17 @@
 .dvorane{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     margin-bottom: 1rem;
 }
 
 .dvorane > div {
     display: flex;
     flex-direction: column;
-    align-items: stretch;
-    margin-top: 1rem;
+    padding-top: 1rem;
 }
 
-@media screen and (min-width: 1650px){
-    .dvorane{
+@media screen and (max-width: 1700px){
+    .page{
         flex-direction: row;
     }
     .dvorane > div {

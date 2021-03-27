@@ -94,20 +94,11 @@
 
 @media screen and (max-width: 1024px){
     .description{
-        display: flex;
-        z-index: 0;
-        position:unset;
-        margin: 0;
-        background-color: var(--color-tabs);
-        padding: 20px;
-        width: 100%;
-        min-height: 100%;
-        margin: 0 15px;
-        flex-shrink: 1;
+        height: max-content;
     }
     .text{
         display: flex;
-        max-height: 13.25em;
+        max-height: 13.4em;
         flex-direction: column;
     }
 }
