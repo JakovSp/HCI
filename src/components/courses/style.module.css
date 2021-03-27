@@ -1,0 +1,110 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.page {
+    padding: 50px 0px 0px 0px;
+}
+.deck {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: 100%;
+    width: 100%;
+    padding: 20px 0px 0px 0px;
+    align-items: stretch;
+    gap: 150px;
+}
+.deck1 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: 100%;
+    width: 100%;
+    padding: 20px 0px 0px 0px;
+    align-items: stretch;
+    gap: 150px;
+}
+.apply {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0;
+    border-style: solid;
+    color: white;
+    border-color: #bb6058;
+    border-width: thin;
+    border-radius: 5px;
+    background-color: #bb6058;
+    text-decoration: none;
+    -moz-box-shadow:    1px 1px 5px 1px #ccc;
+    -webkit-box-shadow: 1px 1px 5px 1px #ccc;
+    box-shadow:         1px 1px 5px 1px #ccc;
+    overflow: hidden;
+    width: 100%;
+    height: 100px;
+    gap: 15px;
+}
+.apply p {
+    margin: auto 0px auto 0px;
+}
+.collapseContent {
+    padding: 15px;
+    margin: 15px 0px 0px 0px;
+    background-color: #cabfbe;
+    border-radius: 5px;
+}
+.court {
+    display: flex;
+    flex-direction: row;
+    gap: 80px;
+}
+.field {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.iconInner {
+    position: relative;
+    margin: auto 0px auto 0px;
+    width: 25px;
+    height: 25px;
+   /* Vertical line */
+   /* horizontal line */
+}
+.iconInner:before, .iconInner:after {
+    content: "";
+    position: absolute;
+    background-color: white;
+    transition: transform 0.25s ease-out;
+}
+.iconInner:before {
+    top: 0;
+    left: 50%;
+    width: 4px;
+    height: 100%;
+    margin-left: -2px;
+}
+.iconInner:after {
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    margin-top: -2px;
+}
+.apply:hover {
+    cursor: pointer;
+}
+.iconInner.open1:before {
+    transform: rotate(90deg);
+}
+.iconInner.open1:after {
+    transform: rotate(180deg);
+}
+.iconInner.open2:before {
+    transform: rotate(90deg);
+}
+.iconInner.open2:after {
+    transform: rotate(180deg);
+}
+

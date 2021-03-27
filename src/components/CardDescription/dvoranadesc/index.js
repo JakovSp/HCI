@@ -10,7 +10,7 @@ export const Desc1 = () => (
     </div>
     <div className={styles.bottomform}>
         <p>Heinzelova 66 1000 Zagreb, Croatia</p>
-        <Button style={styles.signup_button} text={"Najavi"}/>
+        <Button style={styles.button} text={"Najavi"} page="" action={ () => {} }/>
     </div>                            
 </div>
 )
@@ -22,8 +22,8 @@ export const Desc2 = () => (
             <p >Infromacije možete dobiti svaki radni dan 16-20h u prostorijama dvorane. Raspored korištenja dvorane ima posebne periode za natjecatelje, predškolarce, tri generacije školaraca te za odrasle.</p>
         </div>
         <div className={styles.bottomform}>
-            <Button style={styles.signup_button} text={"Najavi"}/>
-            <p style={{textAlign: "right"}}> Poljud 8. Mediteranskih igara br.2, Split</p>
+            <Button style={styles.button} text={"Najavi"} page="" action={ () => {} }/>
+            <p> Poljud 8. Mediteranskih igara br.2, Split</p>
         </div>                            
     </div>
  )    

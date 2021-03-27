@@ -5,7 +5,7 @@ import Img from "gatsby-image"
 const GradientImage = ({ImageName, width}) => {
   const data = useStaticQuery(graphql`
   query {
-    Paklenica: file(relativePath: { eq: "Teren/paklenica-description.png" }) {
+    Paklenica: file(relativePath: { eq: "Teren/paklenica-description.jpg" }) {
         childImageSharp {
         fluid(quality: 90, maxWidth: 2000) {
           ...GatsbyImageSharpFluid_withWebp
@@ -26,7 +26,7 @@ const GradientImage = ({ImageName, width}) => {
         }  
       }
     }
-    Velebit: file(relativePath: { eq: "Teren/Sjeverni-velebit2-description.png" }) {
+    Velebit: file(relativePath: { eq: "Teren/Sjeverni-velebit2-description.jpg" }) {
       childImageSharp {
       fluid(quality: 90, maxWidth: 2000) {
         ...GatsbyImageSharpFluid_withWebp
@@ -49,8 +49,8 @@ const GradientImage = ({ImageName, width}) => {
     }
   }`)
  return (
-      <div style={{width: width, objectFit: "cover"}}>
-        <Img fluid={data[ImageName].childImageSharp.fluid} />
+      <div>
+        <Img fluid={data.Dinara.childImageSharp.fluid} />
       </div>
   )
 }

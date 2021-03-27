@@ -7,45 +7,54 @@
 
 .imageDescription{
     display: flex;
-    justify-content: flex-end;
+    flex-direction: row;
+    width: 100%;
 }
 
 .description{
+    width: 100%;
     color: var(--highlight-background);
     display: flex;
-    flex-direction: column;
-    position: absolute;
-    z-index: 1;
-    margin-left: 55%;
+    padding: 0px 20px;
+    flex-direction: column;    
     justify-content: space-between;
-    min-height: 28vh;
+    background-color: #e3e3e3;
 }
 
 .text{
-    display: inline;
-    font-size: 1.2em;
-    flex-direction: column;
-    max-height: 14.45em;
+    font-size: 18px;
     overflow: hidden;
     text-overflow: ellipsis;
-}
-
-.text p{
-    margin: 1.2em 0;
 }
 
 .bottom{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-right: 1vw;
-    padding-top: 1rem;
+    padding: 20px 0px;
 }
-.bottom p{
-    font-size: 1.4rem;
-    margin: 0;
-    text-decoration: underline;
-    cursor: pointer;
+
+.button {
+    padding: 10px 30px;
+    background-color: #bb6058;
+    border-color: #bb6058;
+    color: #f6f7f9;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.2s;
+    max-width: 100px;
+}
+.button:hover{
+    color: #f6f7f9;
+    background-color: #c0564c;
+    border-color: #c0564c;
+}
+.button:active, .login_button:focus {
+    color: #f6f7f9;
+    background-color: #bb6058;
+    border-color: #bb6058;
+    box-shadow: none;
 }
 
 .signup_button{

@@ -1,23 +1,13 @@
 import React,{useState} from "react"
 import styles from "./style.module.css"
-import TecajeviForm from "./tecajevi-forms"
-import DvoranaForm from "./dvorana-forms"
-import TerenForm from "./teren-forms"
-import TecajeviHeader from "../../components/tecajevi-header"
-import Literatura from "../../components/literatura"
+import SectionTitle from '../../components/section-title'
+import Courses from '../../components/courses'
 
-const TecajeviMain = () => {
-  const [selectedPage, setSelectedPage] = useState("Literatura")
-  const AddPages = {  "Dvorana" : <DvoranaForm />,
-                      "Teren" : <TerenForm />,
-                      "Literatura" : <Literatura/>}
-  return(
+const TecajeviMain = () => (
     <div className={styles.page}>
-      <TecajeviHeader />
-      <TecajeviForm setSelected={setSelectedPage} />
-      {
-        AddPages[selectedPage]
-      }
+      <SectionTitle title="Tečajevi" subtitle="Prijavite se naše tečajeve i naučite se penjati"/>
+      <Courses />
     </div>
-)}
+)
+
 export default TecajeviMain

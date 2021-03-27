@@ -39,6 +39,12 @@ const TerenHeader = ({selected,setSelected}) =>{
         <div style={{visibility: desktopmode? "hidden" : "visible"}}><FontAwesomeIcon className={styles.arrow} size="3x" icon={faChevronLeft} onClick={() => {
                 index = rotate(index, -1)
                 setSelected(Locations[index])}}/></div>
+{/*     {Locations.map(el => <>
+        {el === selected ?
+        <li style={{marginTop: '20px'}} className={styles.active} ><images.Selected ImageName={el}/><p style={{marginTop: '10px', marginBottom: '10px'}}>{el}</p></li>: 
+        <li style={{marginTop: '20px'}} onClick={() => setSelected(el)} ><images.Unselected ImageName={el} /><p style={{marginTop: '10px', marginBottom: '10px'}}>{el}</p></li>}
+        </>
+    )} */}
 
         { desktopmode ? Locations.map(el => <>
                 {el === selected ?
