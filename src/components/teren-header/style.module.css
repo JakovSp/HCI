@@ -4,6 +4,8 @@
     background-color: var(--color-tabs);
     justify-content: space-evenly;
     width: 100%;
+    align-items: center;
+    padding: 10px 0;
 }
 
 .header li{
@@ -15,7 +17,6 @@
 }
 
 .active{
-
     font-weight: bold;
 }
 .header li:not(.active){

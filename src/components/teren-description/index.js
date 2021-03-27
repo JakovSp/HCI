@@ -1,6 +1,5 @@
 import React,{ useState, useEffect } from "react"
 import styles from "./style.module.css"
-import scrollTo from 'gatsby-plugin-smoothscroll'
 import GradientImage from "../Images/Teren/Description"
 import Button from "../button"
 import LocationDesc from "./descriptiontext"
@@ -25,7 +24,8 @@ const TerenDescription = ({activeLocation}) => {
     return (
     <div className={styles.imageDescription} >
         <div style={{ display: desktopmode ? "flex" : "none"}} >
-            <GradientImage ImageName={activeLocation} width={"1024px"}/>
+            <GradientImage ImageName={activeLocation} width={"750px"}/>
+            <div className={styles.transition} ></div>
         </div>
         <div className={styles.description}>
             <div className={styles.text}>

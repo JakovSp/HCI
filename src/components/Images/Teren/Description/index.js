@@ -5,42 +5,42 @@ import Img from "gatsby-image"
 const GradientImage = ({ImageName, width}) => {
   const data = useStaticQuery(graphql`
   query {
-    Paklenica: file(relativePath: { eq: "Teren/paklenica-description.jpg" }) {
+    Paklenica: file(relativePath: { eq: "Teren/Paklenica.jpg" }) {
         childImageSharp {
         fluid(quality: 90, maxWidth: 2000) {
           ...GatsbyImageSharpFluid_withWebp
         }  
       }
     }
-    Dinara: file(relativePath: { eq: "Teren/dinara2-description.jpg" }) {
+    Dinara: file(relativePath: { eq: "Teren/Dinara.jpg" }) {
       childImageSharp {
       fluid(quality: 90, maxWidth: 2000) {
         ...GatsbyImageSharpFluid_withWebp
         }  
       }
     }
-    Biokovo: file(relativePath: { eq: "Teren/Biokovo-description.jpg" }) {
+    Biokovo: file(relativePath: { eq: "Teren/Biokovo.jpg" }) {
       childImageSharp {
       fluid(quality: 90, maxWidth: 2000) {
         ...GatsbyImageSharpFluid_withWebp
         }  
       }
     }
-    Velebit: file(relativePath: { eq: "Teren/Sjeverni-velebit2-description.jpg" }) {
+    Velebit: file(relativePath: { eq: "Teren/Velebit.jpg" }) {
       childImageSharp {
       fluid(quality: 90, maxWidth: 2000) {
         ...GatsbyImageSharpFluid_withWebp
         }  
       }
     }
-    Kozjak: file(relativePath: { eq: "Teren/kozjak-description.jpg" }) {
+    Kozjak: file(relativePath: { eq: "Teren/Kozjak.jpg" }) {
       childImageSharp {
       fluid(quality: 90, maxWidth: 2000) {
         ...GatsbyImageSharpFluid_withWebp
         }  
       }
     }
-    Mosor: file(relativePath: { eq: "Teren/mosor-description.jpg" }) {
+    Mosor: file(relativePath: { eq: "Teren/Mosor.jpg" }) {
       childImageSharp {
       fluid(quality: 90, maxWidth: 2000) {
         ...GatsbyImageSharpFluid_withWebp
@@ -49,8 +49,8 @@ const GradientImage = ({ImageName, width}) => {
     }
   }`)
  return (
-      <div>
-        <Img fluid={data.Dinara.childImageSharp.fluid} />
+      <div style={{ width: width}} >
+        <Img fluid={data[ImageName].childImageSharp.fluid} />
       </div>
   )
 }
