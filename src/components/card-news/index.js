@@ -2,8 +2,8 @@ import React from 'react'
 import styles from './style.module.css'
 import Img from "gatsby-image"
 
-const CardNews = ({newsImage, newsTitle, newsDesc, newsTimestamp}) => (
-    <a className={styles.card_container}>
+const CardNews = ({newsId, newsImage, newsTitle, newsDesc, newsTimestamp}) => (
+    <a id={newsId} className={styles.card_container}>
         <Img fluid={newsImage} className={styles.card_image} />
         <div className={styles.inner_card_container}>
             <div className={styles.title_container}>

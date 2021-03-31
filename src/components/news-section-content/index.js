@@ -35,6 +35,7 @@ const NewsSection = () => {
               aspectRatio
             }
           }
+          contentfulid
           title
           description
           timestamp
@@ -48,7 +49,7 @@ const NewsSection = () => {
       {
         news.allContentfulNewsPreview.nodes.map( (nodes) => {
           return (
-            <CardNews newsImage={nodes.image.fixed} newsTitle={nodes.title} newsDesc={nodes.description} newsTimestamp={nodes.timestamp}/>
+            <CardNews newsId={'news-' + nodes.contentfulid} newsImage={nodes.image.fixed} newsTitle={nodes.title} newsDesc={nodes.description} newsTimestamp={nodes.timestamp}/>
           )
         })
       }

@@ -1,0 +1,35 @@
+.cart{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+    cursor: pointer;
+}
+.size{
+    display: block;
+    position: absolute;
+    padding-right: 4px;
+}
+
+.emptycartlabel{
+    display: none;
+}
+.emptycarticon{
+    display: none;
+    visibility: hidden;
+}
+
+.cart:hover .emptycartlabel{
+    display: block;
+    position: absolute;
+    z-index: 1;
+    color: white;
+    border-radius: 4px;
+    padding: 2px;
+    font-size: 10px;
+    background-color: darkred;
+}
+.cart:hover .emptycarticon{
+    display: block;
+    visibility: visible;
+}

@@ -1,45 +1,104 @@
+:root{
+    --button-color-idle: #a96e5a;
+    --button-color-active: #9e583c;
+    --button-color-text: #f6f7f9;
+    --button-color-disabled: var(--color-disabled);
+}
 
 .imageDescription{
     display: flex;
-    justify-content: flex-end;
+    flex-direction: row;
+    padding: 0 10px;
+    padding-top: 20px;
+    width: 100%;
+}
+
+.transition{
+    z-index: 1;
+    margin-left:-150px;
+    width: 150px;
+    background-image: linear-gradient(to right, rgba(227,227,227,0) , rgba(227,227,227,1) );
 }
 
 .description{
     color: var(--highlight-background);
     display: flex;
-    flex-direction: column;
-    position: absolute;
-    z-index: 1;
-    margin-left: 55%;
-    justify-content: space-between;
-    min-height: 28vw;
+    padding: 0px 20px;
+    flex-direction: column;    
+    background-color: #e3e3e3;
+    width: 100%;
+    height: 500px;
 }
 
 .text{
-    display: inline;
-    font-size: 1.2em;
-    flex-direction: min;
-    max-height: 24vw;
+    z-index: 1;
+    font-size: 18px;
     overflow: hidden;
     text-overflow: ellipsis;
-}
-
-.text p{
-    margin: 1.2em 0;
 }
 
 .bottom{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-right: 1vw;
-    padding-top: 1rem;
-}
-.bottom p{
-    font-size: 1.4rem;
-    margin: 0;
-    text-decoration: underline;
-    cursor: pointer;
+    padding: 20px 0px;
 }
 
-@media screen and (max-width: 800px){}
+.button {
+    padding: 10px 30px;
+    background-color: #bb6058;
+    border-color: #bb6058;
+    color: #f6f7f9;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.2s;
+    max-width: 100px;
+}
+.button:hover{
+    color: #f6f7f9;
+    background-color: #c0564c;
+    border-color: #c0564c;
+}
+.button:active, .login_button:focus {
+    color: #f6f7f9;
+    background-color: #bb6058;
+    border-color: #bb6058;
+    box-shadow: none;
+}
+
+.signup_button{
+    padding: 10px 25px;
+    background-color: var(--button-color-idle);
+    border-color: var(--button-color-idle);
+    color: var(--button-color-text);
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.3rem;
+    transition: 0.2s;
+    max-width: 180px;
+    text-align: center;
+    cursor: pointer;
+}
+.signup_button:hover{
+  color: var(--button-color-text);
+  background-color: var(--button-color-active);
+  border-color: var(--button-color-active);
+}
+.signup_button:active, .signup_button:focus {
+  color: var(--button-color-text);
+  background-color: var(--button-color-active);
+  border-color: var(--button-color-active);
+  box-shadow: 0 0 0 0.2rem #b97f67;
+}
+
+@media screen and (max-width: 1024px){
+    .description{
+        height: max-content;
+    }
+    .text{
+        display: flex;
+        max-height: 13.4em;
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,14 @@
+.checkout{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 6vh;
+}
+
+@media screen and (max-width: 1024px){
+  .checkout{
+    flex-direction: column;
+    margin-left: 1vw;
+    margin-right: 1vw;
+  }
+}

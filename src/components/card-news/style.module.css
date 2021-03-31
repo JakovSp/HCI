@@ -13,7 +13,7 @@
     box-shadow:         1px 1px 5px 1px #ccc;
     overflow: hidden;
     width: 100%;
-    max-height: 500px;
+    height: 420px;
 }
 .inner_card_container {
     display: flex;
@@ -61,11 +61,4 @@
     flex-direction: row;
     align-items: center;
     gap: 10px;
-}
-.dot {
-    height: 7px;
-    width: 7px;
-    background-color: var(--excursion-dot-color);;
-    border-radius: 50%;
-    display: inline-block;
 }

@@ -3,6 +3,8 @@ import React, { useState } from 'react'
 import Button from '../button'
 import styles from './style.module.css'
 import auth from '../../authentication/auth-init'
+import Cart from "../checkout"
+
 
 const ProfileNav = ({loggedIn}) => {
 
@@ -33,7 +35,7 @@ const ProfileNav = ({loggedIn}) => {
 
     return(
     <section className={styles.profile}>
-    {/* <li> Košarica </li> */}
+        <Cart />
         <Button page={ isUserLoggedIn ? "/" : "/login" } action={ isUserLoggedIn ? () => attemptLogout() : () => {}} style={styles.login_button} text= { isUserLoggedIn ? "Odjava" : "Prijava" }/>
     </section>
     )

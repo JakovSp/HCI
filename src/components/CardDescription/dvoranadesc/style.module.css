@@ -1,18 +1,24 @@
+:root{
+    --button-color-idle: #a96e5a;
+    --button-color-active: #9e583c;
+    --button-color-text: #f6f7f9;
+    --button-color-disabled: var(--color-disabled);
+}
 .formdesc{
     display: flex;
     flex-direction: column;
     margin: 0;
     padding: 0 1.5rem;
-    font-size: 1em;
+    font-size: 1rem;
     margin: 0;
     justify-content: space-between;
     max-height: 820px;
 
 }
 
-.formdesc div p {
+.formdesc > div > p {
     display:inline-block;
-    max-height: 60px;
+    max-height: 5.25rem;
     margin-bottom: 0;
     overflow:hidden;
     text-overflow: ellipsis;
@@ -22,12 +28,34 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-bottom: 0.5rem;
-    padding-top: rem;
+    margin: 0.5rem 0;
 }
 
-.bottomform p{
+.bottomform > p{
     margin: 0;
     padding: 0;
     color: var(--highlight-background);
+}
+
+.button {
+    padding: 8px 30px;
+    background-color: #bb6058;
+    border-color: #bb6058;
+    color: #f6f7f9;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.2s;
+    max-width: 100px;
+}
+.button:hover{
+    color: #f6f7f9;
+    background-color: #c0564c;
+    border-color: #c0564c;
+}
+.button:active, .login_button:focus {
+    color: #f6f7f9;
+    background-color: #bb6058;
+    border-color: #bb6058;
+    box-shadow: none;
 }

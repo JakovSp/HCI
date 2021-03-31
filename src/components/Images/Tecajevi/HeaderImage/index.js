@@ -14,7 +14,7 @@ const HeaderImage = () => {
         }
     }`);
 return (
-    <div style={{width: "100vw", objectFit: "cover"}}>
+    <div style={{width: "100%", objectFit: "cover"}}>
       <Img fluid={data.HeaderImage.childImageSharp.fluid} />
     </div>
 )
