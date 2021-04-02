@@ -41,17 +41,14 @@ const FiltersForm = ({list, setList})=>{
     return (
     <div className={styles.page}>
         <div className={styles.inputfield} >
-            <input placeholder={""} onChange={ (e) => {
+            <input type="text" placeholder="Search.." name="search" onFocus={() => setHide(true)} onBlur={ () => setHide(false)} onChange={ (e) => {
                         setList(filterData(e.target.value, filters))
-                    }}
-                    onFocus={() => setHide(true)} onBlur={ () => setHide(false)} />
-            <div className={styles.input_placeholder} style={{visibility: hiding? "hidden" : "visible"}} >
-                <FontAwesomeIcon icon={faSearch} color="var(--color-disabled)" /> 
-            </div>
+                    }}/>
+            <FontAwesomeIcon className={styles.input_image} icon={faSearch} color="black" />
         </div>
         {Filters.map(FilterType => 
             <div className={styles.filterblock}>
-                <p>{FilterType[0]}</p>
+                <h4>{FilterType[0]}</h4>
                 {FilterType[1].map( el =>
                     <label className={styles.container} >{el}
                         <input type="checkbox" onClick={e => {
@@ -61,7 +58,6 @@ const FiltersForm = ({list, setList})=>{
                         <span className={styles.checkmark} ></span>
                     </label>
                 )}
-                <hr/>
             </div>
             )}
     </div>

@@ -1,23 +1,18 @@
 .card{
     display: flex;
+    flex-direction: column;
     background: var(--color-tabs);
 }
-
 .image{
     display: flex;
-    flex: 2;
+    flex-direction: column;
+    width: 100%;
 }
-
-.rowdesc{
+.columndesc{
     display: flex;
-    flex: 1;
-    margin: 0px;
- }
-
- .columndesc{
-    display: flex;
+    flex-direction: column;
     margin: 0px;
     width: 0;
     min-width: 100%;
     justify-content: center;
- }
+}

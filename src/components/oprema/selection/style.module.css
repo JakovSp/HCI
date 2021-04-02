@@ -1,18 +1,24 @@
 .selection{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 78%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    justify-items: center;
+    width: 100%;
+    gap: 50px;
 }
 
 .element{
     display: flex;
-    margin: 2vh 2vw;
-    cursor: pointer;
-    max-height: 250px;
-}
-.element:hover{
-    box-shadow: 2px 2px 3px 3px var(--color-disabled);
+    -webkit-box-sizing: border-box; 
+    -moz-box-sizing: border-box;    
+    box-sizing: border-box;      
+    overflow: hidden;
+    border-color: #bb6058;
+    border-width: thin;
+    border-radius: 5px;
+    border-style: solid;
+    background-color: white;
+    height: 300px;
+    width: 300px;
 }
 .element:active{
     animation: addtocart 0.35s ease-in-out;
