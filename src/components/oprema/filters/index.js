@@ -46,12 +46,12 @@ const FiltersForm = ({list, setList})=>{
                     }}
                     onFocus={() => setHide(true)} onBlur={ () => setHide(false)} />
             <div className={styles.input_placeholder} style={{visibility: hiding? "hidden" : "visible"}} >
-                <FontAwesomeIcon icon={faSearch} color="var(--color-disabled)" /> 
+                <FontAwesomeIcon icon={faSearch} size="2x" color="var(--color-disabled)" /> 
             </div>
         </div>
         {Filters.map(FilterType => 
             <div className={styles.filterblock}>
-                <p>{FilterType[0]}</p>
+                <h4>{FilterType[0]}</h4>
                 {FilterType[1].map( el =>
                     <label className={styles.container} >{el}
                         <input type="checkbox" onClick={e => {
