@@ -42,7 +42,8 @@ h2{
     list-style: none;
     flex-direction: row;
     justify-content: space-between;
-    padding: 3vh 1vw;
+    padding: 25px 25px;
+    border-bottom: 1px solid black;
 }
 
 .inventory li *{
