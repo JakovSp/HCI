@@ -22,7 +22,7 @@ const BlogPost = ({ pageContext }) => {
     }
 
     function formatId(blaId) {
-        return blaId.replaceAll(" ","").replace("-","")
+        return blaId.replace(/ /g,"").replace("-","")
     }
 
     const options = {
@@ -49,14 +49,14 @@ const BlogPost = ({ pageContext }) => {
 
     return (
     <main className={styles.container}>
-        <BackgroundImage className={styles.image} fluid={image.fluid}/>
+        <BackgroundImage className={styles.image} fluid={image}/>
         <div className={styles.bla}>
             <h1>{title}</h1>
             <h3>{description}</h3>
             <h4>{author + " | " + category}</h4>
         </div>
         <article className={styles.body}>
-            {renderRichText(body,options)}
+            {renderRichText(body)}
         </article>
         <div className={cx(styles.navigationContainer, (isSticky) ? styles.sticky : '')} id="myHeader">
             {
